@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BCF7232ADC1700B48B80 /* AppDelegate.swift */; };
+		0104BCFA232ADC1700B48B80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BCF9232ADC1700B48B80 /* SceneDelegate.swift */; };
+		0104BCFC232ADC1700B48B80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BCFB232ADC1700B48B80 /* ViewController.swift */; };
+		0104BCFF232ADC1700B48B80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0104BCFD232ADC1700B48B80 /* Main.storyboard */; };
+		0104BD01232ADC1900B48B80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0104BD00232ADC1900B48B80 /* Assets.xcassets */; };
+		0104BD04232ADC1900B48B80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0104BD02232ADC1900B48B80 /* LaunchScreen.storyboard */; };
+		0104BD0F232ADC1900B48B80 /* TronaldDumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD0E232ADC1900B48B80 /* TronaldDumpTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0104BD0B232ADC1900B48B80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0104BCEC232ADC1600B48B80 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0104BCF3232ADC1600B48B80;
+			remoteInfo = TronaldDump;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0104BCF4232ADC1600B48B80 /* TronaldDump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TronaldDump.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0104BCF7232ADC1700B48B80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0104BCF9232ADC1700B48B80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0104BCFB232ADC1700B48B80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0104BCFE232ADC1700B48B80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0104BD00232ADC1900B48B80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0104BD03232ADC1900B48B80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0104BD05232ADC1900B48B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0104BD0A232ADC1900B48B80 /* TronaldDumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TronaldDumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0104BD0E232ADC1900B48B80 /* TronaldDumpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronaldDumpTests.swift; sourceTree = "<group>"; };
+		0104BD10232ADC1900B48B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0104BCF1232ADC1600B48B80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0104BD07232ADC1900B48B80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0104BCEB232ADC1600B48B80 = {
+			isa = PBXGroup;
+			children = (
+				0104BCF6232ADC1600B48B80 /* TronaldDump */,
+				0104BD0D232ADC1900B48B80 /* TronaldDumpTests */,
+				0104BCF5232ADC1600B48B80 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0104BCF5232ADC1600B48B80 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0104BCF4232ADC1600B48B80 /* TronaldDump.app */,
+				0104BD0A232ADC1900B48B80 /* TronaldDumpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0104BCF6232ADC1600B48B80 /* TronaldDump */ = {
+			isa = PBXGroup;
+			children = (
+				0104BCF7232ADC1700B48B80 /* AppDelegate.swift */,
+				0104BCF9232ADC1700B48B80 /* SceneDelegate.swift */,
+				0104BCFB232ADC1700B48B80 /* ViewController.swift */,
+				0104BCFD232ADC1700B48B80 /* Main.storyboard */,
+				0104BD00232ADC1900B48B80 /* Assets.xcassets */,
+				0104BD02232ADC1900B48B80 /* LaunchScreen.storyboard */,
+				0104BD05232ADC1900B48B80 /* Info.plist */,
+			);
+			path = TronaldDump;
+			sourceTree = "<group>";
+		};
+		0104BD0D232ADC1900B48B80 /* TronaldDumpTests */ = {
+			isa = PBXGroup;
+			children = (
+				0104BD0E232ADC1900B48B80 /* TronaldDumpTests.swift */,
+				0104BD10232ADC1900B48B80 /* Info.plist */,
+			);
+			path = TronaldDumpTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0104BCF3232ADC1600B48B80 /* TronaldDump */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0104BD13232ADC1900B48B80 /* Build configuration list for PBXNativeTarget "TronaldDump" */;
+			buildPhases = (
+				0104BCF0232ADC1600B48B80 /* Sources */,
+				0104BCF1232ADC1600B48B80 /* Frameworks */,
+				0104BCF2232ADC1600B48B80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TronaldDump;
+			productName = TronaldDump;
+			productReference = 0104BCF4232ADC1600B48B80 /* TronaldDump.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0104BD09232ADC1900B48B80 /* TronaldDumpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0104BD16232ADC1900B48B80 /* Build configuration list for PBXNativeTarget "TronaldDumpTests" */;
+			buildPhases = (
+				0104BD06232ADC1900B48B80 /* Sources */,
+				0104BD07232ADC1900B48B80 /* Frameworks */,
+				0104BD08232ADC1900B48B80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0104BD0C232ADC1900B48B80 /* PBXTargetDependency */,
+			);
+			name = TronaldDumpTests;
+			productName = TronaldDumpTests;
+			productReference = 0104BD0A232ADC1900B48B80 /* TronaldDumpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0104BCEC232ADC1600B48B80 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Arman Arutyunov";
+				TargetAttributes = {
+					0104BCF3232ADC1600B48B80 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					0104BD09232ADC1900B48B80 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 0104BCF3232ADC1600B48B80;
+					};
+				};
+			};
+			buildConfigurationList = 0104BCEF232ADC1600B48B80 /* Build configuration list for PBXProject "TronaldDump" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0104BCEB232ADC1600B48B80;
+			productRefGroup = 0104BCF5232ADC1600B48B80 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0104BCF3232ADC1600B48B80 /* TronaldDump */,
+				0104BD09232ADC1900B48B80 /* TronaldDumpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0104BCF2232ADC1600B48B80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0104BD04232ADC1900B48B80 /* LaunchScreen.storyboard in Resources */,
+				0104BD01232ADC1900B48B80 /* Assets.xcassets in Resources */,
+				0104BCFF232ADC1700B48B80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0104BD08232ADC1900B48B80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0104BCF0232ADC1600B48B80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0104BCFC232ADC1700B48B80 /* ViewController.swift in Sources */,
+				0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */,
+				0104BCFA232ADC1700B48B80 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0104BD06232ADC1900B48B80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0104BD0F232ADC1900B48B80 /* TronaldDumpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0104BD0C232ADC1900B48B80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0104BCF3232ADC1600B48B80 /* TronaldDump */;
+			targetProxy = 0104BD0B232ADC1900B48B80 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0104BCFD232ADC1700B48B80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0104BCFE232ADC1700B48B80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0104BD02232ADC1900B48B80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0104BD03232ADC1900B48B80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0104BD11232ADC1900B48B80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0104BD12232ADC1900B48B80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0104BD14232ADC1900B48B80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42934LX6SX;
+				INFOPLIST_FILE = TronaldDump/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.armanarutyunov.TronaldDump;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0104BD15232ADC1900B48B80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42934LX6SX;
+				INFOPLIST_FILE = TronaldDump/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.armanarutyunov.TronaldDump;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0104BD17232ADC1900B48B80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42934LX6SX;
+				INFOPLIST_FILE = TronaldDumpTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.armanarutyunov.TronaldDumpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TronaldDump.app/TronaldDump";
+			};
+			name = Debug;
+		};
+		0104BD18232ADC1900B48B80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 42934LX6SX;
+				INFOPLIST_FILE = TronaldDumpTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.armanarutyunov.TronaldDumpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TronaldDump.app/TronaldDump";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0104BCEF232ADC1600B48B80 /* Build configuration list for PBXProject "TronaldDump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0104BD11232ADC1900B48B80 /* Debug */,
+				0104BD12232ADC1900B48B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0104BD13232ADC1900B48B80 /* Build configuration list for PBXNativeTarget "TronaldDump" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0104BD14232ADC1900B48B80 /* Debug */,
+				0104BD15232ADC1900B48B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0104BD16232ADC1900B48B80 /* Build configuration list for PBXNativeTarget "TronaldDumpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0104BD17232ADC1900B48B80 /* Debug */,
+				0104BD18232ADC1900B48B80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0104BCEC232ADC1600B48B80 /* Project object */;
+}
