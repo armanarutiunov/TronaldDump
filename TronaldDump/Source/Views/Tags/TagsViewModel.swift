@@ -14,7 +14,7 @@ protocol TagsViewModel {
 
 public class ConcreteTagsViewModel: TagsViewModel {
 	
-	let tags = [Tag]()
+	let tags = [Tag(title: "Donald Trump")]
 	
 	public init() {
 		

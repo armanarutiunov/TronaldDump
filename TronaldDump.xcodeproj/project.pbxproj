@@ -17,7 +17,6 @@
 		0104BD2F232ADED300B48B80 /* TagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD2E232ADED300B48B80 /* TagsViewModel.swift */; };
 		0104BD31232ADF1A00B48B80 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD30232ADF1A00B48B80 /* TagsViewController.swift */; };
 		0104BD33232ADF6E00B48B80 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD32232ADF6E00B48B80 /* TagsView.swift */; };
-		0104BD35232AE25700B48B80 /* TagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD34232AE25700B48B80 /* TagCell.swift */; };
 		01F8AEF4232AEA63009CCAE1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* Tag.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 		0104BD2E232ADED300B48B80 /* TagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewModel.swift; sourceTree = "<group>"; };
 		0104BD30232ADF1A00B48B80 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 		0104BD32232ADF6E00B48B80 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
-		0104BD34232AE25700B48B80 /* TagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCell.swift; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,7 +179,6 @@
 				0104BD2E232ADED300B48B80 /* TagsViewModel.swift */,
 				0104BD30232ADF1A00B48B80 /* TagsViewController.swift */,
 				0104BD32232ADF6E00B48B80 /* TagsView.swift */,
-				0104BD34232AE25700B48B80 /* TagCell.swift */,
 			);
 			path = Tags;
 			sourceTree = "<group>";
@@ -298,7 +295,6 @@
 				0104BD1C232ADCB100B48B80 /* AppCore.swift in Sources */,
 				0104BD33232ADF6E00B48B80 /* TagsView.swift in Sources */,
 				0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */,
-				0104BD35232AE25700B48B80 /* TagCell.swift in Sources */,
 				0104BD2C232ADE3A00B48B80 /* Coordinator.swift in Sources */,
 				01F8AEF4232AEA63009CCAE1 /* Tag.swift in Sources */,
 				0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */,

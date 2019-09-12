@@ -13,7 +13,10 @@ class TagsViewController: UIViewController {
 	private let viewModel: TagsViewModel
 	
 	private var tagsView: TagsView {
-		return view as! TagsView
+		guard let view = view as? TagsView else {
+			fatalError("Failed to cast view into TagsView")
+		}
+		return view
 	}
 	
 	init(viewModel: TagsViewModel) {
@@ -39,14 +42,15 @@ class TagsViewController: UIViewController {
 
 extension TagsViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return viewModel.tags.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "tagCell") as? TagCell else {
-			return UITableViewCell()
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "tagCell") else {
+			fatalError("Failed to dequeue tagCell")
 		}
-		
+		let tag = viewModel.tags[indexPath.row]
+		cell.textLabel?.text = tag.title
 		return cell
 	}
 }

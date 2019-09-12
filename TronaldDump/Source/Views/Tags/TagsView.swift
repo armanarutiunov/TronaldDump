@@ -21,7 +21,6 @@ class TagsView: UIView {
 	init() {
         super.init(frame: CGRect.zero)
         addSubviewsAndConstraints()
-        configureSubviews()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -31,7 +30,7 @@ class TagsView: UIView {
 	func configureTableView(with viewController: UITableViewDataSource & UITableViewDelegate) {
 		tableView.delegate = viewController
 		tableView.dataSource = viewController
-		tableView.register(TagCell.self, forCellReuseIdentifier: Constants.TableView.cellIdentifier)
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.TableView.cellIdentifier)
 		tableView.tableFooterView = UIView()
 	}
 	
@@ -48,10 +47,6 @@ class TagsView: UIView {
 			tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
 			tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
 		])
-    }
-
-    private func configureSubviews() {
-        
     }
 
 }
