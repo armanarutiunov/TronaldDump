@@ -10,22 +10,22 @@ import UIKit
 
 protocol Coordinator {
 	var navigationController: UINavigationController { get }
-	var appCore: AppCore { get }
+	var serviceContainer: ServiceContainer { get }
 	
 	func start()
 }
 
-struct MainCoordinator: Coordinator {
+class MainCoordinator: Coordinator {
 	let navigationController: UINavigationController
-	let appCore: AppCore
+	var serviceContainer: ServiceContainer
 	
-	init(navigationController: UINavigationController, appCore: AppCore) {
+	init(navigationController: UINavigationController, serviceContainer: ServiceContainer) {
 		self.navigationController = navigationController
-		self.appCore = appCore
+		self.serviceContainer = serviceContainer
 	}
 	
 	func start() {
-		let tagsViewModel = ConcreteTagsViewModel()
+		let tagsViewModel = ConcreteTagsViewModel(tagService: serviceContainer.tagService)
 		let tagsViewController = TagsViewController(viewModel: tagsViewModel)
 		navigationController.pushViewController(tagsViewController, animated: false)
 	}

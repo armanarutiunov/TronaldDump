@@ -11,7 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	private let appCore = AppCore()
+	private let serviceContainer = ServiceContainer()
 	
     var window: UIWindow?
 
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private func setupInitialCoordinator() {
         let navigationController = UINavigationController()
-        let coordinator = MainCoordinator(navigationController: navigationController, appCore: appCore)
+        let coordinator = MainCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
         coordinator.start()
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController

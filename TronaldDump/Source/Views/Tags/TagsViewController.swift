@@ -36,6 +36,7 @@ class TagsViewController: UIViewController {
 		super.viewDidLoad()
 		title = "Tags"
 		tagsView.configureTableView(with: self)
+		viewModel.addObserver(self)
 	}
 	
 }
@@ -58,5 +59,11 @@ extension TagsViewController: UITableViewDataSource {
 extension TagsViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
+	}
+}
+
+extension TagsViewController: TagViewModelObserver {
+	func didFetchTags() {
+		tagsView.reloadTableView()
 	}
 }

@@ -8,9 +8,9 @@
 
 import Foundation
 
-public typealias CloudRequestCompletionBlock = (Result<Data, Error>) -> Void
 
 public protocol CloudService {
+	typealias CloudRequestCompletionBlock = (Result<Data, Error>) -> Void
 	func send(_ request: CloudRequest, completion: @escaping CloudRequestCompletionBlock)
 }
 

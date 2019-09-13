@@ -8,9 +8,14 @@
 
 import Foundation
 
-struct ServiceContainer {
-
-    init() {
-    }
-
+public struct ServiceContainer {
+	
+	lazy var cloudService: CloudService = {
+		return ConcreteCloudService()
+	}()
+	
+	lazy var tagService: TagService = {
+		return ConcreteTagService(cloudService: cloudService)
+	}()
+	
 }

@@ -34,6 +34,10 @@ class TagsView: UIView {
 		tableView.tableFooterView = UIView()
 	}
 	
+	func reloadTableView() {
+		tableView.reloadData()
+	}
+	
 	// MARK: - Private
 	
 	private func addSubviewsAndConstraints() {

@@ -11,13 +11,18 @@
 		0104BD01232ADC1900B48B80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0104BD00232ADC1900B48B80 /* Assets.xcassets */; };
 		0104BD04232ADC1900B48B80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0104BD02232ADC1900B48B80 /* LaunchScreen.storyboard */; };
 		0104BD0F232ADC1900B48B80 /* TronaldDumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD0E232ADC1900B48B80 /* TronaldDumpTests.swift */; };
-		0104BD1C232ADCB100B48B80 /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD1B232ADCB100B48B80 /* AppCore.swift */; };
 		0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD23232ADD3D00B48B80 /* ServiceContainer.swift */; };
 		0104BD2C232ADE3A00B48B80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD2B232ADE3A00B48B80 /* Coordinator.swift */; };
 		0104BD2F232ADED300B48B80 /* TagsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD2E232ADED300B48B80 /* TagsViewModel.swift */; };
 		0104BD31232ADF1A00B48B80 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD30232ADF1A00B48B80 /* TagsViewController.swift */; };
 		0104BD33232ADF6E00B48B80 /* TagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD32232ADF6E00B48B80 /* TagsView.swift */; };
 		01F8AEF4232AEA63009CCAE1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* Tag.swift */; };
+		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
+		01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */; };
+		01F8AEFB232AF58E009CCAE1 /* CloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEFA232AF58E009CCAE1 /* CloudRequest.swift */; };
+		01F8AF02232B0D0A009CCAE1 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AF01232B0D0A009CCAE1 /* URLExtensions.swift */; };
+		01F8AF04232B0EC1009CCAE1 /* CloudConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AF03232B0EC1009CCAE1 /* CloudConfiguration.swift */; };
+		01F8AF07232B2623009CCAE1 /* TagService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AF06232B2623009CCAE1 /* TagService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +44,18 @@
 		0104BD0A232ADC1900B48B80 /* TronaldDumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TronaldDumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0104BD0E232ADC1900B48B80 /* TronaldDumpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TronaldDumpTests.swift; sourceTree = "<group>"; };
 		0104BD10232ADC1900B48B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0104BD1B232ADCB100B48B80 /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
 		0104BD23232ADD3D00B48B80 /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceContainer.swift; path = TronaldDump/Source/App/ServiceContainer.swift; sourceTree = SOURCE_ROOT; };
 		0104BD2B232ADE3A00B48B80 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0104BD2E232ADED300B48B80 /* TagsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewModel.swift; sourceTree = "<group>"; };
 		0104BD30232ADF1A00B48B80 /* TagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
 		0104BD32232ADF6E00B48B80 /* TagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsView.swift; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
+		01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		01F8AEFA232AF58E009CCAE1 /* CloudRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRequest.swift; sourceTree = "<group>"; };
+		01F8AF01232B0D0A009CCAE1 /* URLExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		01F8AF03232B0EC1009CCAE1 /* CloudConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudConfiguration.swift; sourceTree = "<group>"; };
+		01F8AF06232B2623009CCAE1 /* TagService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +120,6 @@
 				0104BD20232ADCF700B48B80 /* Coordinator */,
 				0104BD1F232ADCEA00B48B80 /* Views */,
 				0104BD21232ADCFC00B48B80 /* Services */,
-				01F8AEF2232AEA4E009CCAE1 /* Entities */,
 				0104BD22232ADD1B00B48B80 /* Utils */,
 			);
 			path = Source;
@@ -120,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				0104BCF7232ADC1700B48B80 /* AppDelegate.swift */,
-				0104BD1B232ADCB100B48B80 /* AppCore.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -162,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				0104BD23232ADD3D00B48B80 /* ServiceContainer.swift */,
+				01F8AEF5232AF395009CCAE1 /* Cloud */,
+				01F8AF05232B2614009CCAE1 /* Tag */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 		0104BD22232ADD1B00B48B80 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				01F8AF01232B0D0A009CCAE1 /* URLExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -183,12 +194,24 @@
 			path = Tags;
 			sourceTree = "<group>";
 		};
-		01F8AEF2232AEA4E009CCAE1 /* Entities */ = {
+		01F8AEF5232AF395009CCAE1 /* Cloud */ = {
+			isa = PBXGroup;
+			children = (
+				01F8AF03232B0EC1009CCAE1 /* CloudConfiguration.swift */,
+				01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */,
+				01F8AEFA232AF58E009CCAE1 /* CloudRequest.swift */,
+				01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */,
+			);
+			path = Cloud;
+			sourceTree = "<group>";
+		};
+		01F8AF05232B2614009CCAE1 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
 				01F8AEF3232AEA63009CCAE1 /* Tag.swift */,
+				01F8AF06232B2623009CCAE1 /* TagService.swift */,
 			);
-			path = Entities;
+			path = Tag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,13 +315,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				0104BD2F232ADED300B48B80 /* TagsViewModel.swift in Sources */,
-				0104BD1C232ADCB100B48B80 /* AppCore.swift in Sources */,
+				01F8AF07232B2623009CCAE1 /* TagService.swift in Sources */,
 				0104BD33232ADF6E00B48B80 /* TagsView.swift in Sources */,
+				01F8AF02232B0D0A009CCAE1 /* URLExtensions.swift in Sources */,
+				01F8AEFB232AF58E009CCAE1 /* CloudRequest.swift in Sources */,
 				0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */,
 				0104BD2C232ADE3A00B48B80 /* Coordinator.swift in Sources */,
 				01F8AEF4232AEA63009CCAE1 /* Tag.swift in Sources */,
 				0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */,
+				01F8AF04232B0EC1009CCAE1 /* CloudConfiguration.swift in Sources */,
 				0104BD31232ADF1A00B48B80 /* TagsViewController.swift in Sources */,
+				01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */,
+				01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
