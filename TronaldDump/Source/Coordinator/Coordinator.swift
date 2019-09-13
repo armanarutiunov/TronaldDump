@@ -25,8 +25,8 @@ class MainCoordinator: Coordinator {
 	}
 	
 	func start() {
-		let tagsViewModel = ConcreteTagsViewModel(tagService: serviceContainer.tagService)
-		let tagsViewController = TagsViewController(viewModel: tagsViewModel)
+		let tagsViewModel = ConcreteTagListViewModel(tagService: serviceContainer.tagService)
+		let tagsViewController = TagListViewController(viewModel: tagsViewModel)
 		navigationController.pushViewController(tagsViewController, animated: false)
 	}
 }

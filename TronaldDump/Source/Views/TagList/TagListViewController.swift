@@ -1,5 +1,5 @@
 //
-//  TagsViewController.swift
+//  TagListViewController.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 12.09.2019.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TagsViewController: UIViewController {
+class TagListViewController: UIViewController {
 	
-	private let viewModel: TagsViewModel
+	private let viewModel: TagListViewModel
 	
-	private var tagsView: TagsView {
-		guard let view = view as? TagsView else {
-			fatalError("Failed to cast view into TagsView")
+	private var tagsView: TagListView {
+		guard let view = view as? TagListView else {
+			fatalError("Failed to cast view into TagListView")
 		}
 		return view
 	}
 	
-	init(viewModel: TagsViewModel) {
+	init(viewModel: TagListViewModel) {
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -29,7 +29,7 @@ class TagsViewController: UIViewController {
 	}
 	
 	override func loadView() {
-		view = TagsView()
+		view = TagListView()
 	}
 	
 	override func viewDidLoad() {
@@ -41,7 +41,7 @@ class TagsViewController: UIViewController {
 	
 }
 
-extension TagsViewController: UITableViewDataSource {
+extension TagListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.tags.count
 	}
@@ -56,13 +56,13 @@ extension TagsViewController: UITableViewDataSource {
 	}
 }
 
-extension TagsViewController: UITableViewDelegate {
+extension TagListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 	}
 }
 
-extension TagsViewController: TagViewModelObserver {
+extension TagListViewController: TagListViewModelObserver {
 	func didFetchTags() {
 		tagsView.reloadTableView()
 	}

@@ -1,5 +1,5 @@
 //
-//  TagsView.swift
+//  TagListView.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 12.09.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagsView: UIView {
+class TagListView: UIView {
 	
 	private struct Constants {
 		struct TableView {

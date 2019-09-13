@@ -1,5 +1,5 @@
 //
-//  TagsViewModel.swift
+//  TagListViewModel.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 12.09.2019.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-public protocol TagViewModelObserver: AnyObject {
+public protocol TagListViewModelObserver: AnyObject {
 	func didFetchTags()
 }
 
-public protocol TagsViewModel {
+public protocol TagListViewModel {
 	var tags: [Tag] { get }
 	
-	func addObserver(_ observer: TagViewModelObserver)
-	func removeObserver(_ observer: TagViewModelObserver)
+	func addObserver(_ observer: TagListViewModelObserver)
+	func removeObserver(_ observer: TagListViewModelObserver)
 }
 
-public class ConcreteTagsViewModel: TagsViewModel {
+public class ConcreteTagListViewModel: TagListViewModel {
 	
 	private let tagService: TagService
 	private var observers = NSHashTable<AnyObject>.weakObjects()
@@ -35,11 +35,11 @@ public class ConcreteTagsViewModel: TagsViewModel {
 		fetchTags()
 	}
 	
-	public func addObserver(_ observer: TagViewModelObserver) {
+	public func addObserver(_ observer: TagListViewModelObserver) {
 		observers.add(observer)
 	}
 	
-	public func removeObserver(_ observer: TagViewModelObserver) {
+	public func removeObserver(_ observer: TagListViewModelObserver) {
 		observers.remove(observer)
 	}
 	
@@ -59,7 +59,7 @@ public class ConcreteTagsViewModel: TagsViewModel {
 	private func notifyObserversTagsFetched() {
 		observers
 			.allObjects
-			.compactMap { $0 as? TagViewModelObserver }
+			.compactMap { $0 as? TagListViewModelObserver }
 			.forEach { $0.didFetchTags() }
 	}
 }
