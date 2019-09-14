@@ -1,5 +1,5 @@
 //
-//  Tag.swift
+//  TagList.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 12.09.2019.
@@ -8,21 +8,15 @@
 
 import Foundation
 
-public struct TagResponse: Decodable {
-	let tags: [Tag]
+public struct TagList: Decodable {
+	let titles: [String]
 	
 	private enum CodingKeys: String, CodingKey {
-		case tags = "_embedded"
+		case tagTitles = "_embedded"
 	}
 	
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
-		tags = try container
-			.decode([String].self, forKey: .tags)
-			.map { Tag(title: $0) }
+		titles = try container.decode([String].self, forKey: .tagTitles)
 	}
-}
-
-public struct Tag {
-	let title: String
 }

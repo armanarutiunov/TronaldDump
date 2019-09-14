@@ -43,15 +43,14 @@ class TagListViewController: UIViewController {
 
 extension TagListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return viewModel.tags.count
+		return viewModel.tagTitles.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "tagCell") else {
 			fatalError("Failed to dequeue tagCell")
 		}
-		let tag = viewModel.tags[indexPath.row]
-		cell.textLabel?.text = tag.title
+		cell.textLabel?.text = viewModel.tagTitles[indexPath.row]
 		return cell
 	}
 }

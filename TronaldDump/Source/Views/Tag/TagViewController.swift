@@ -35,6 +35,6 @@ class TagViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-		title = viewModel.title
+		title = viewModel.tagTitle
     }
 }

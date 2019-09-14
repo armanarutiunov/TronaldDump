@@ -26,15 +26,15 @@ class MainCoordinator: Coordinator {
 	
 	func start() {
 		let viewModel = ConcreteTagListViewModel(tagService: serviceContainer.tagService)
-		viewModel.selectTagCommand = { [weak self] tag in
-			self?.goToTagScreen(tag)
+		viewModel.selectTagCommand = { [weak self] tagTitle in
+			self?.goToTagScreen(tagTitle)
 		}
 		let viewController = TagListViewController(viewModel: viewModel)
 		navigationController.pushViewController(viewController, animated: false)
 	}
 	
-	func goToTagScreen(_ tag: Tag) {
-		let viewModel = ConcreteTagViewModel(tagService: serviceContainer.tagService, tag: tag)
+	func goToTagScreen(_ tagTitle: String) {
+		let viewModel = ConcreteTagViewModel(tagService: serviceContainer.tagService, tagTitle: tagTitle)
 		let viewController = TagViewController(viewModel: viewModel)
 		navigationController.pushViewController(viewController, animated: true)
 	}

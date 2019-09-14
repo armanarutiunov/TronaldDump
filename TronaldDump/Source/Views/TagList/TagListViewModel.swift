@@ -13,7 +13,7 @@ public protocol TagListViewModelObserver: AnyObject {
 }
 
 public protocol TagListViewModel {
-	var tags: [Tag] { get }
+	var tagTitles: [String] { get }
 	
 	func selectTag(at index: Int)
 	
@@ -26,9 +26,9 @@ public class ConcreteTagListViewModel: TagListViewModel {
 	private let tagService: TagService
 	private var observers = NSHashTable<AnyObject>.weakObjects()
 	
-	public var selectTagCommand: ((Tag) -> Void)?
+	public var selectTagCommand: ((String) -> Void)?
 	
-	public var tags = [Tag]() {
+	public var tagTitles = [String]() {
 		didSet {
 			notifyObserversTagsFetched()
 		}
@@ -40,8 +40,8 @@ public class ConcreteTagListViewModel: TagListViewModel {
 	}
 	
 	public func selectTag(at index: Int) {
-		let tag = tags[index]
-		selectTagCommand?(tag)
+		let tagTitle = tagTitles[index]
+		selectTagCommand?(tagTitle)
 	}
 	
 	public func addObserver(_ observer: TagListViewModelObserver) {
@@ -57,8 +57,8 @@ public class ConcreteTagListViewModel: TagListViewModel {
 	private func fetchTags() {
 		tagService.fetchTags { [weak self] result in
 			switch result {
-			case .success(let tags):
-				self?.tags = tags
+			case .success(let tagTitles):
+				self?.tagTitles = tagTitles
 			case .failure(let error):
 				print("Failure: \(error)")
 			}

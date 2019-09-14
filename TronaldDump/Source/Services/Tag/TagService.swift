@@ -14,7 +14,7 @@ public enum TagFetchError: Error {
 }
 
 public protocol TagService {
-	typealias FetchTagCompletionBlock = (Result<[Tag], TagFetchError>) -> Void
+	typealias FetchTagCompletionBlock = (Result<[String], TagFetchError>) -> Void
 	func fetchTags(completion: @escaping FetchTagCompletionBlock)
 }
 
@@ -38,11 +38,11 @@ public class ConcreteTagService: TagService {
 			}
 			switch result {
 			case .success(let data):
-				guard let tags = self.decodeData(data) else {
+				guard let tagTitles = self.decodeData(data) else {
 					completion(.failure(.decodeFailure))
 					return
 				}
-				completion(.success(tags))
+				completion(.success(tagTitles))
 			case .failure(let error):
 				print("Cloud failure: \(error)")
 				completion(.failure(.cloudFailure))
@@ -52,10 +52,10 @@ public class ConcreteTagService: TagService {
 	
 	// MARK: - Private
 	
-	private func decodeData(_ data: Data) -> [Tag]? {
+	private func decodeData(_ data: Data) -> [String]? {
 		do {
-			let tagResponse = try JSONDecoder().decode(TagResponse.self, from: data)
-			return tagResponse.tags
+			let tagList = try JSONDecoder().decode(TagList.self, from: data)
+			return tagList.titles
 		} catch {
 			print("Failed to decode data: \n\(String(describing: String(data: data, encoding: .utf8))). \nError: \(error)")
 		}

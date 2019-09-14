@@ -19,7 +19,7 @@
 		01CA132A232B9B5200441423 /* TagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1329232B9B5200441423 /* TagViewModel.swift */; };
 		01CA132C232B9B6A00441423 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132B232B9B6A00441423 /* TagViewController.swift */; };
 		01CA132E232B9B8300441423 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132D232B9B8300441423 /* TagView.swift */; };
-		01F8AEF4232AEA63009CCAE1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* Tag.swift */; };
+		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
 		01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */; };
 		01F8AEFB232AF58E009CCAE1 /* CloudRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEFA232AF58E009CCAE1 /* CloudRequest.swift */; };
@@ -55,7 +55,7 @@
 		01CA1329232B9B5200441423 /* TagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewModel.swift; sourceTree = "<group>"; };
 		01CA132B232B9B6A00441423 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
 		01CA132D232B9B8300441423 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		01F8AEF3232AEA63009CCAE1 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		01F8AEFA232AF58E009CCAE1 /* CloudRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRequest.swift; sourceTree = "<group>"; };
@@ -225,7 +225,7 @@
 		01F8AF05232B2614009CCAE1 /* Tag */ = {
 			isa = PBXGroup;
 			children = (
-				01F8AEF3232AEA63009CCAE1 /* Tag.swift */,
+				01F8AEF3232AEA63009CCAE1 /* TagList.swift */,
 				01F8AF06232B2623009CCAE1 /* TagService.swift */,
 			);
 			path = Tag;
@@ -338,7 +338,7 @@
 				01F8AEFB232AF58E009CCAE1 /* CloudRequest.swift in Sources */,
 				0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */,
 				0104BD2C232ADE3A00B48B80 /* Coordinator.swift in Sources */,
-				01F8AEF4232AEA63009CCAE1 /* Tag.swift in Sources */,
+				01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */,
 				0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */,
 				01CA132A232B9B5200441423 /* TagViewModel.swift in Sources */,
 				01F8AF04232B0EC1009CCAE1 /* CloudConfiguration.swift in Sources */,

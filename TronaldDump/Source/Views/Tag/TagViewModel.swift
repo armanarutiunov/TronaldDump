@@ -9,21 +9,18 @@
 import Foundation
 
 public protocol TagViewModel {
-	var title: String { get }
+	var tagTitle: String { get }
 }
 
 public class ConcreteTagViewModel: TagViewModel {
 	
 	private let tagService: TagService
-	private let tag: Tag
 	
-	public var title: String {
-		return tag.title
-	}
+	public var tagTitle: String
 	
-	public init(tagService: TagService, tag: Tag) {
+	public init(tagService: TagService, tagTitle: String) {
 		self.tagService = tagService
-		self.tag = tag
+		self.tagTitle = tagTitle
 	}
 	
 }
