@@ -11,23 +11,25 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-	private let serviceContainer = ServiceContainer()
-	
     var window: UIWindow?
+	
+	private let serviceContainer = ServiceContainer()
+	private let initialNavigationController = UINavigationController()
+	private lazy var initialCoordinator: Coordinator = {
+        return MainCoordinator(navigationController: initialNavigationController, serviceContainer: serviceContainer)
+	}()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        setupInitialCoordinator()
+        startInitialCoordinator()
         return true
     }
 
     // MARK: - Private
 
-    private func setupInitialCoordinator() {
-        let navigationController = UINavigationController()
-        let coordinator = MainCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
-        coordinator.start()
+    private func startInitialCoordinator() {
+        initialCoordinator.start()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = navigationController
+		window?.rootViewController = initialNavigationController
         window?.makeKeyAndVisible()
     }
 }
