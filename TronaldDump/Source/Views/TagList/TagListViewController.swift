@@ -58,7 +58,7 @@ extension TagListViewController: UITableViewDataSource {
 
 extension TagListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
+		viewModel.selectTag(at: indexPath.row)
 	}
 }
 

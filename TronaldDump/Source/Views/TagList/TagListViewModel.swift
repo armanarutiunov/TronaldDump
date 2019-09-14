@@ -15,6 +15,8 @@ public protocol TagListViewModelObserver: AnyObject {
 public protocol TagListViewModel {
 	var tags: [Tag] { get }
 	
+	func selectTag(at index: Int)
+	
 	func addObserver(_ observer: TagListViewModelObserver)
 	func removeObserver(_ observer: TagListViewModelObserver)
 }
@@ -23,6 +25,8 @@ public class ConcreteTagListViewModel: TagListViewModel {
 	
 	private let tagService: TagService
 	private var observers = NSHashTable<AnyObject>.weakObjects()
+	
+	public var selectTagCommand: ((Tag) -> Void)?
 	
 	public var tags = [Tag]() {
 		didSet {
@@ -33,6 +37,11 @@ public class ConcreteTagListViewModel: TagListViewModel {
 	public init(tagService: TagService) {
 		self.tagService = tagService
 		fetchTags()
+	}
+	
+	public func selectTag(at index: Int) {
+		let tag = tags[index]
+		selectTagCommand?(tag)
 	}
 	
 	public func addObserver(_ observer: TagListViewModelObserver) {
