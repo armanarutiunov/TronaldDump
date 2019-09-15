@@ -26,6 +26,9 @@
 		01CA1338232DEABC00441423 /* SavedQuotesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */; };
 		01CA133A232DEE6600441423 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1339232DEE6600441423 /* QuoteCell.swift */; };
 		01E85F83232E54DB0012BCAC /* DataPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */; };
+		01E85F87232E5FD60012BCAC /* SavedQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F86232E5FD60012BCAC /* SavedQuotesView.swift */; };
+		01E85F89232E5FEB0012BCAC /* SavedQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F88232E5FEB0012BCAC /* SavedQuotesViewController.swift */; };
+		01E85F8B232E5FF60012BCAC /* SavedQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F8A232E5FF60012BCAC /* SavedQuotesViewModel.swift */; };
 		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
 		01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */; };
@@ -69,6 +72,9 @@
 		01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesCoordinator.swift; sourceTree = "<group>"; };
 		01CA1339232DEE6600441423 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceService.swift; sourceTree = "<group>"; };
+		01E85F86232E5FD60012BCAC /* SavedQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesView.swift; sourceTree = "<group>"; };
+		01E85F88232E5FEB0012BCAC /* SavedQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesViewController.swift; sourceTree = "<group>"; };
+		01E85F8A232E5FF60012BCAC /* SavedQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesViewModel.swift; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 			children = (
 				0104BD2D232ADEC400B48B80 /* TagList */,
 				01CA1326232B9A4000441423 /* QuoteList */,
+				01E85F85232E5FB70012BCAC /* SavedQuotes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,6 +244,16 @@
 				01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */,
 			);
 			path = DataPersistence;
+			sourceTree = "<group>";
+		};
+		01E85F85232E5FB70012BCAC /* SavedQuotes */ = {
+			isa = PBXGroup;
+			children = (
+				01E85F8A232E5FF60012BCAC /* SavedQuotesViewModel.swift */,
+				01E85F88232E5FEB0012BCAC /* SavedQuotesViewController.swift */,
+				01E85F86232E5FD60012BCAC /* SavedQuotesView.swift */,
+			);
+			path = SavedQuotes;
 			sourceTree = "<group>";
 		};
 		01F8AEF5232AF395009CCAE1 /* Cloud */ = {
@@ -371,12 +388,15 @@
 				0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */,
 				0104BD2C232ADE3A00B48B80 /* Coordinator.swift in Sources */,
 				01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */,
+				01E85F8B232E5FF60012BCAC /* SavedQuotesViewModel.swift in Sources */,
 				0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */,
 				01CA1334232DE98900441423 /* MemeCoordinator.swift in Sources */,
 				01CA132A232B9B5200441423 /* QuoteListViewModel.swift in Sources */,
 				01F8AF04232B0EC1009CCAE1 /* CloudConfiguration.swift in Sources */,
+				01E85F87232E5FD60012BCAC /* SavedQuotesView.swift in Sources */,
 				0104BD31232ADF1A00B48B80 /* TagListViewController.swift in Sources */,
 				01CA1332232DE82A00441423 /* TagCoordinator.swift in Sources */,
+				01E85F89232E5FEB0012BCAC /* SavedQuotesViewController.swift in Sources */,
 				01CA1336232DEA9B00441423 /* QuoteSearchCoordinator.swift in Sources */,
 				01CA1338232DEABC00441423 /* SavedQuotesCoordinator.swift in Sources */,
 				01CA132C232B9B6A00441423 /* QuoteListViewController.swift in Sources */,

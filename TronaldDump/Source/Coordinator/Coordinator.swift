@@ -22,14 +22,16 @@ class MainCoordinator: Coordinator {
 	private let tabBarController: UITabBarController
 	
 	private lazy var tagCoordinator: Coordinator = {
-		let tagNavigationController = UINavigationController()
-		let tagCoordinator = TagCoordinator(navigationController: tagNavigationController, serviceContainer: serviceContainer)
+		let navigationController = UINavigationController()
+		navigationController.tabBarItem = UITabBarItem(title: "Tags", image: nil, selectedImage: nil)
+		let tagCoordinator = TagCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
 		tagCoordinator.start()
 		return tagCoordinator
 	}()
 	
 	private lazy var quoteSearchCoordinator: Coordinator = {
 		let navigationController = UINavigationController()
+		navigationController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
 		let coordinator = QuoteSearchCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
 		coordinator.start()
 		return coordinator
@@ -37,6 +39,7 @@ class MainCoordinator: Coordinator {
 	
 	private lazy var savedQuotesCoordinator: Coordinator = {
 		let navigationController = UINavigationController()
+		navigationController.tabBarItem = UITabBarItem(title: "Saved", image: nil, selectedImage: nil)
 		let coordinator = SavedQuoteCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
 		coordinator.start()
 		return coordinator
@@ -44,6 +47,7 @@ class MainCoordinator: Coordinator {
 	
 	private lazy var memeCoordinator: Coordinator = {
 		let navigationController = UINavigationController()
+		navigationController.tabBarItem = UITabBarItem(title: "Memes", image: nil, selectedImage: nil)
 		let coordinator = MemeCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
 		coordinator.start()
 		return coordinator

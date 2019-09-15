@@ -18,6 +18,8 @@ class SavedQuoteCoordinator: Coordinator {
 	}
 	
 	func start() {
-		
+		let viewModel = ConcreteSavedQuotesViewModel(tagService: serviceContainer.tagService)
+		let viewController = SavedQuotesViewController(viewModel: viewModel)
+		navigationController.pushViewController(viewController, animated: false)
 	}
 }
