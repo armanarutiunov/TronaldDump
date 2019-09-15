@@ -16,6 +16,7 @@ public protocol QuoteListViewModel {
 	var tagTitle: String { get }
 	var quotes: [Quote] { get }
 	
+	func sourceUrl(at index: Int) -> URL? 
 	func addObserver(_ observer: QuoteListViewModelObserver)
 	func removeObserver(_ observer: QuoteListViewModelObserver)
 }
@@ -36,6 +37,13 @@ public class ConcreteQuoteListViewModel: QuoteListViewModel {
 		self.tagService = tagService
 		self.tagTitle = tagTitle
 		fetchQuotes()
+	}
+	
+	public func sourceUrl(at index: Int) -> URL? {
+		guard let url = quotes[index].urls.first(where: { $0 != nil }), let safeUrl = url else {
+			return nil
+		}
+		return safeUrl
 	}
 	
 	public func addObserver(_ observer: QuoteListViewModelObserver) {
