@@ -15,7 +15,7 @@ protocol Coordinator {
 	func start()
 }
 
-class MainCoordinator: UISearchContainerViewController {
+class MainCoordinator: Coordinator {
 	let navigationController = UINavigationController()
 	var serviceContainer: ServiceContainer
 	

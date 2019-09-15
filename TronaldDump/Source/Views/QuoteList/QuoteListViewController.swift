@@ -59,12 +59,11 @@ extension QuoteListViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") else {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") as? QuoteCell else {
 			fatalError("Failed to dequeue quoteCell")
 		}
 		let quote = viewModel.quotes[indexPath.row]
-		cell.textLabel?.text = quote.value
-		cell.textLabel?.numberOfLines = 0
+		cell.quoteText = quote.value
 		return cell
 	}
 }

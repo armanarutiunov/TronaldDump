@@ -30,7 +30,9 @@ class QuoteListView: UIView {
 	func configureTableView(with viewController: UITableViewDataSource & UITableViewDelegate) {
 		tableView.delegate = viewController
 		tableView.dataSource = viewController
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.TableView.cellIdentifier)
+		tableView.rowHeight = UITableView.automaticDimension
+		tableView.estimatedRowHeight = 44
+		tableView.register(QuoteCell.self, forCellReuseIdentifier: Constants.TableView.cellIdentifier)
 		tableView.tableFooterView = UIView()
 	}
 	

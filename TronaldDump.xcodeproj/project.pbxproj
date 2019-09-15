@@ -24,6 +24,7 @@
 		01CA1334232DE98900441423 /* MemeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1333232DE98900441423 /* MemeCoordinator.swift */; };
 		01CA1336232DEA9B00441423 /* QuoteSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */; };
 		01CA1338232DEABC00441423 /* SavedQuotesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */; };
+		01CA133A232DEE6600441423 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1339232DEE6600441423 /* QuoteCell.swift */; };
 		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
 		01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */; };
@@ -65,6 +66,7 @@
 		01CA1333232DE98900441423 /* MemeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoordinator.swift; sourceTree = "<group>"; };
 		01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSearchCoordinator.swift; sourceTree = "<group>"; };
 		01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesCoordinator.swift; sourceTree = "<group>"; };
+		01CA1339232DEE6600441423 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -180,9 +182,9 @@
 			children = (
 				0104BD2B232ADE3A00B48B80 /* Coordinator.swift */,
 				01CA1331232DE82A00441423 /* TagCoordinator.swift */,
-				01CA1333232DE98900441423 /* MemeCoordinator.swift */,
 				01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */,
 				01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */,
+				01CA1333232DE98900441423 /* MemeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -221,6 +223,7 @@
 				01CA1329232B9B5200441423 /* QuoteListViewModel.swift */,
 				01CA132B232B9B6A00441423 /* QuoteListViewController.swift */,
 				01CA132D232B9B8300441423 /* QuoteListView.swift */,
+				01CA1339232DEE6600441423 /* QuoteCell.swift */,
 			);
 			path = QuoteList;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				0104BD2F232ADED300B48B80 /* TagListViewModel.swift in Sources */,
 				01F8AF07232B2623009CCAE1 /* TagService.swift in Sources */,
 				0104BD33232ADF6E00B48B80 /* TagListView.swift in Sources */,
+				01CA133A232DEE6600441423 /* QuoteCell.swift in Sources */,
 				01F8AF02232B0D0A009CCAE1 /* URLExtensions.swift in Sources */,
 				01F8AEFB232AF58E009CCAE1 /* CloudRequest.swift in Sources */,
 				0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */,
