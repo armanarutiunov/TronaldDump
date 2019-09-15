@@ -1,5 +1,5 @@
 //
-//  TagViewController.swift
+//  QuoteListViewController.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 13.09.2019.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TagViewController: UIViewController {
+class QuoteListViewController: UIViewController {
 	
-	private let viewModel: TagViewModel
+	private let viewModel: QuoteListViewModel
 	
-	private var tagView: TagView {
-		guard let view = view as? TagView else {
-			fatalError("Failed to cast view into TagView")
+	private var quoteListView: QuoteListView {
+		guard let view = view as? QuoteListView else {
+			fatalError("Failed to cast view into QuoteListView")
 		}
 		return view
 	}
 	
-	init(viewModel: TagViewModel) {
+	init(viewModel: QuoteListViewModel) {
 		self.viewModel = viewModel
 		super.init(nibName: nil, bundle: nil)
 	}
@@ -29,18 +29,18 @@ class TagViewController: UIViewController {
 	}
 	
 	override func loadView() {
-		view = TagView()
+		view = QuoteListView()
 	}
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		title = viewModel.tagTitle
-		tagView.configureTableView(with: self)
+		quoteListView.configureTableView(with: self)
 		viewModel.addObserver(self)
     }
 }
 
-extension TagViewController: UITableViewDataSource {
+extension QuoteListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return viewModel.quotes.count
 	}
@@ -55,12 +55,12 @@ extension TagViewController: UITableViewDataSource {
 	}
 }
 
-extension TagViewController: UITableViewDelegate {
+extension QuoteListViewController: UITableViewDelegate {
 	
 }
 
-extension TagViewController: TagViewModelObserver {
+extension QuoteListViewController: QuoteListViewModelObserver {
 	func didFetchQuotes() {
-		tagView.reloadTableView()
+		quoteListView.reloadTableView()
 	}
 }

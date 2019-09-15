@@ -17,8 +17,8 @@
 		0104BD31232ADF1A00B48B80 /* TagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD30232ADF1A00B48B80 /* TagListViewController.swift */; };
 		0104BD33232ADF6E00B48B80 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0104BD32232ADF6E00B48B80 /* TagListView.swift */; };
 		01CA132A232B9B5200441423 /* QuoteListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1329232B9B5200441423 /* QuoteListViewModel.swift */; };
-		01CA132C232B9B6A00441423 /* TagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132B232B9B6A00441423 /* TagViewController.swift */; };
-		01CA132E232B9B8300441423 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132D232B9B8300441423 /* TagView.swift */; };
+		01CA132C232B9B6A00441423 /* QuoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132B232B9B6A00441423 /* QuoteListViewController.swift */; };
+		01CA132E232B9B8300441423 /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132D232B9B8300441423 /* QuoteListView.swift */; };
 		01CA1330232DAAFF00441423 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132F232DAAFF00441423 /* Quote.swift */; };
 		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
@@ -54,8 +54,8 @@
 		0104BD30232ADF1A00B48B80 /* TagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListViewController.swift; sourceTree = "<group>"; };
 		0104BD32232ADF6E00B48B80 /* TagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		01CA1329232B9B5200441423 /* QuoteListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListViewModel.swift; sourceTree = "<group>"; };
-		01CA132B232B9B6A00441423 /* TagViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagViewController.swift; sourceTree = "<group>"; };
-		01CA132D232B9B8300441423 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		01CA132B232B9B6A00441423 /* QuoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListViewController.swift; sourceTree = "<group>"; };
+		01CA132D232B9B8300441423 /* QuoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListView.swift; sourceTree = "<group>"; };
 		01CA132F232DAAFF00441423 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				0104BD2D232ADEC400B48B80 /* TagList */,
-				01CA1326232B9A4000441423 /* Tag */,
+				01CA1326232B9A4000441423 /* QuoteList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,14 +203,14 @@
 			path = TagList;
 			sourceTree = "<group>";
 		};
-		01CA1326232B9A4000441423 /* Tag */ = {
+		01CA1326232B9A4000441423 /* QuoteList */ = {
 			isa = PBXGroup;
 			children = (
 				01CA1329232B9B5200441423 /* QuoteListViewModel.swift */,
-				01CA132B232B9B6A00441423 /* TagViewController.swift */,
-				01CA132D232B9B8300441423 /* TagView.swift */,
+				01CA132B232B9B6A00441423 /* QuoteListViewController.swift */,
+				01CA132D232B9B8300441423 /* QuoteListView.swift */,
 			);
-			path = Tag;
+			path = QuoteList;
 			sourceTree = "<group>";
 		};
 		01F8AEF5232AF395009CCAE1 /* Cloud */ = {
@@ -347,10 +347,10 @@
 				01CA132A232B9B5200441423 /* QuoteListViewModel.swift in Sources */,
 				01F8AF04232B0EC1009CCAE1 /* CloudConfiguration.swift in Sources */,
 				0104BD31232ADF1A00B48B80 /* TagListViewController.swift in Sources */,
-				01CA132C232B9B6A00441423 /* TagViewController.swift in Sources */,
+				01CA132C232B9B6A00441423 /* QuoteListViewController.swift in Sources */,
 				01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */,
 				01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */,
-				01CA132E232B9B8300441423 /* TagView.swift in Sources */,
+				01CA132E232B9B8300441423 /* QuoteListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

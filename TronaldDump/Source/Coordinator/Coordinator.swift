@@ -34,8 +34,8 @@ class MainCoordinator: Coordinator {
 	}
 	
 	func goToTagScreen(_ tagTitle: String) {
-		let viewModel = ConcreteTagViewModel(tagService: serviceContainer.tagService, tagTitle: tagTitle)
-		let viewController = TagViewController(viewModel: viewModel)
+		let viewModel = ConcreteQuoteListViewModel(tagService: serviceContainer.tagService, tagTitle: tagTitle)
+		let viewController = QuoteListViewController(viewModel: viewModel)
 		navigationController.pushViewController(viewController, animated: true)
 	}
 }

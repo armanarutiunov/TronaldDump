@@ -1,5 +1,5 @@
 //
-//  TagView.swift
+//  QuoteListView.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 13.09.2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TagView: UIView {
+class QuoteListView: UIView {
 	
 	private struct Constants {
 		struct TableView {

@@ -1,5 +1,5 @@
 //
-//  TagViewModel.swift
+//  QuoteListViewModel.swift
 //  TronaldDump
 //
 //  Created by Arman Arutyunov on 13.09.2019.
@@ -8,19 +8,19 @@
 
 import Foundation
 
-public protocol TagViewModelObserver: AnyObject {
+public protocol QuoteListViewModelObserver: AnyObject {
 	func didFetchQuotes()
 }
 
-public protocol TagViewModel {
+public protocol QuoteListViewModel {
 	var tagTitle: String { get }
 	var quotes: [Quote] { get }
 	
-	func addObserver(_ observer: TagViewModelObserver)
-	func removeObserver(_ observer: TagViewModelObserver)
+	func addObserver(_ observer: QuoteListViewModelObserver)
+	func removeObserver(_ observer: QuoteListViewModelObserver)
 }
 
-public class ConcreteTagViewModel: TagViewModel {
+public class ConcreteQuoteListViewModel: QuoteListViewModel {
 	
 	private let tagService: TagService
 	private var observers = NSHashTable<AnyObject>.weakObjects()
@@ -38,11 +38,11 @@ public class ConcreteTagViewModel: TagViewModel {
 		fetchQuotes()
 	}
 	
-	public func addObserver(_ observer: TagViewModelObserver) {
+	public func addObserver(_ observer: QuoteListViewModelObserver) {
 		observers.add(observer)
 	}
 	
-	public func removeObserver(_ observer: TagViewModelObserver) {
+	public func removeObserver(_ observer: QuoteListViewModelObserver) {
 		observers.remove(observer)
 	}
 	
@@ -62,7 +62,7 @@ public class ConcreteTagViewModel: TagViewModel {
 	private func notifyObserversQuotesFetched() {
 		observers
 			.allObjects
-			.compactMap { $0 as? TagViewModelObserver }
+			.compactMap { $0 as? QuoteListViewModelObserver }
 			.forEach { $0.didFetchQuotes() }
 	}
 }

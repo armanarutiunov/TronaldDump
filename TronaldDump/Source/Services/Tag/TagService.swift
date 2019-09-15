@@ -61,7 +61,7 @@ public class ConcreteTagService: TagService {
 			}
 			switch result {
 			case .success(let data):
-				guard let quotes = self.decodeQuotes(from: data) else {
+				guard let quotes = self.decodeQuoteList(from: data) else {
 					completion(.failure(.decodeFailure))
 					return
 				}
@@ -85,7 +85,7 @@ public class ConcreteTagService: TagService {
 		return nil
 	}
 	
-	private func decodeQuotes(from data: Data) -> [Quote]? {
+	private func decodeQuoteList(from data: Data) -> [Quote]? {
 		do {
 			let quoteListResponse = try JSONDecoder().decode(QuoteListResponse.self, from: data)
 			return quoteListResponse.quotes
