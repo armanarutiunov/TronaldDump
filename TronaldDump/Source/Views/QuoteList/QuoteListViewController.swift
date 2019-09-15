@@ -64,19 +64,20 @@ extension QuoteListViewController: UITableViewDataSource {
 		}
 		let quote = viewModel.quotes[indexPath.row]
 		cell.textLabel?.text = quote.value
+		cell.textLabel?.numberOfLines = 0
 		return cell
 	}
 }
 
 extension QuoteListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
 		guard let sourceUrl = viewModel.sourceUrl(at: indexPath.row) else {
 			notifyUserSourceUnknown()
 			return
 		}
 		showSourceViewController(with: sourceUrl)
 	}
-	
 }
 
 extension QuoteListViewController: QuoteListViewModelObserver {

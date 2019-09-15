@@ -57,6 +57,7 @@ extension TagListViewController: UITableViewDataSource {
 
 extension TagListViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
 		viewModel.selectTag(at: indexPath.row)
 	}
 }
