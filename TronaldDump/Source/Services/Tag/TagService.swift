@@ -8,14 +8,17 @@
 
 import Foundation
 
-public enum TagFetchError: Error {
+public enum APIError: Error {
 	case cloudFailure
 	case decodeFailure
 }
 
 public protocol TagService {
-	typealias FetchTagCompletionBlock = (Result<[String], TagFetchError>) -> Void
-	func fetchTags(completion: @escaping FetchTagCompletionBlock)
+	typealias FetchTagListCompletionBlock = (Result<[String], APIError>) -> Void
+	typealias FetchQuotesCompletionBlock = (Result<[Quote], APIError>) -> Void
+	
+	func fetchTags(completion: @escaping FetchTagListCompletionBlock)
+	func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock)
 }
 
 public class ConcreteTagService: TagService {
@@ -30,7 +33,7 @@ public class ConcreteTagService: TagService {
 		self.cloudService = cloudService
 	}
 	
-	public func fetchTags(completion: @escaping FetchTagCompletionBlock) {
+	public func fetchTags(completion: @escaping FetchTagListCompletionBlock) {
 		let request = CloudRequest(route: Endpoints.tag)
 		cloudService.send(request) { [weak self] result in
 			guard let self = self else {
@@ -38,7 +41,7 @@ public class ConcreteTagService: TagService {
 			}
 			switch result {
 			case .success(let data):
-				guard let tagTitles = self.decodeData(data) else {
+				guard let tagTitles = self.decodeTagList(from: data) else {
 					completion(.failure(.decodeFailure))
 					return
 				}
@@ -50,12 +53,42 @@ public class ConcreteTagService: TagService {
 		}
 	}
 	
+	public func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock) {
+		let request = CloudRequest(route: "\(Endpoints.tag)/\(tag)")
+		cloudService.send(request) { [weak self] result in
+			guard let self = self else {
+				return
+			}
+			switch result {
+			case .success(let data):
+				guard let quotes = self.decodeQuotes(from: data) else {
+					completion(.failure(.decodeFailure))
+					return
+				}
+				completion(.success(quotes))
+			case .failure(let error):
+				print("Cloud failure: \(error)")
+				completion(.failure(.cloudFailure))
+			}
+		}
+	}
+	
 	// MARK: - Private
 	
-	private func decodeData(_ data: Data) -> [String]? {
+	private func decodeTagList(from data: Data) -> [String]? {
 		do {
 			let tagList = try JSONDecoder().decode(TagList.self, from: data)
 			return tagList.titles
+		} catch {
+			print("Failed to decode data: \n\(String(describing: String(data: data, encoding: .utf8))). \nError: \(error)")
+		}
+		return nil
+	}
+	
+	private func decodeQuotes(from data: Data) -> [Quote]? {
+		do {
+			let quoteListResponse = try JSONDecoder().decode(QuoteListResponse.self, from: data)
+			return quoteListResponse.quotes
 		} catch {
 			print("Failed to decode data: \n\(String(describing: String(data: data, encoding: .utf8))). \nError: \(error)")
 		}

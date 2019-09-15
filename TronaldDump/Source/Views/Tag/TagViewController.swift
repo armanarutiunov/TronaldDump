@@ -34,7 +34,33 @@ class TagViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		title = viewModel.tagTitle
+		tagView.configureTableView(with: self)
+		viewModel.addObserver(self)
     }
+}
+
+extension TagViewController: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return viewModel.quotes.count
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") else {
+			fatalError("Failed to dequeue quoteCell")
+		}
+		let quote = viewModel.quotes[indexPath.row]
+		cell.textLabel?.text = quote.value
+		return cell
+	}
+}
+
+extension TagViewController: UITableViewDelegate {
+	
+}
+
+extension TagViewController: TagViewModelObserver {
+	func didFetchQuotes() {
+		tagView.reloadTableView()
+	}
 }

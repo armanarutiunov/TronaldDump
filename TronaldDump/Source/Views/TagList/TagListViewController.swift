@@ -12,7 +12,7 @@ class TagListViewController: UIViewController {
 	
 	private let viewModel: TagListViewModel
 	
-	private var tagsView: TagListView {
+	private var tagListView: TagListView {
 		guard let view = view as? TagListView else {
 			fatalError("Failed to cast view into TagListView")
 		}
@@ -35,7 +35,7 @@ class TagListViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		title = "Tags"
-		tagsView.configureTableView(with: self)
+		tagListView.configureTableView(with: self)
 		viewModel.addObserver(self)
 	}
 	
@@ -63,6 +63,6 @@ extension TagListViewController: UITableViewDelegate {
 
 extension TagListViewController: TagListViewModelObserver {
 	func didFetchTags() {
-		tagsView.reloadTableView()
+		tagListView.reloadTableView()
 	}
 }
