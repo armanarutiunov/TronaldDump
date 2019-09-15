@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 	
 	private let serviceContainer = ServiceContainer()
-	private let initialNavigationController = UINavigationController()
+	private let initialViewController = UITabBarController()
 	private lazy var initialCoordinator: Coordinator = {
-        return MainCoordinator(navigationController: initialNavigationController, serviceContainer: serviceContainer)
+        return MainCoordinator(tabBarController: initialViewController, serviceContainer: serviceContainer)
 	}()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func startInitialCoordinator() {
         initialCoordinator.start()
         window = UIWindow(frame: UIScreen.main.bounds)
-		window?.rootViewController = initialNavigationController
+		window?.rootViewController = initialViewController
         window?.makeKeyAndVisible()
     }
 }
