@@ -16,6 +16,7 @@ public protocol TagListViewModel {
 	var tagTitles: [String] { get }
 	
 	func selectTag(at index: Int)
+	
 	func addObserver(_ observer: TagListViewModelObserver)
 	func removeObserver(_ observer: TagListViewModelObserver)
 }

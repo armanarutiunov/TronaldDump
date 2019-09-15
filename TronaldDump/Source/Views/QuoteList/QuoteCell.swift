@@ -15,23 +15,21 @@ class QuoteCell: UITableViewCell {
 			case margin = 15
 		}
 		enum Button: CGFloat {
-			case width = 44
+			case side = 44
 		}
 	}
 	
 	private let quoteLabel = UILabel()
 	private let saveButton = UIButton()
 	
-	var didUpdateSavedState: ((Bool) -> Void)?
+	var didUpdateSavedState: (() -> Void)?
 	
-	private var didSave = false {
-		didSet {
-			didUpdateSavedState?(didSave)
+	var saveButtonIcon: UIImage? {
+		get {
+			return saveButton.image(for: .normal)
+		} set {
+			saveButton.setImage(newValue, for: .normal)
 		}
-	}
-	
-	private var saveButtonIcon: UIImage? {
-		return didSave ? UIImage(named: "save_filled") : UIImage(named: "save_empty")
 	}
 	
 	var quoteText: String {
@@ -69,8 +67,8 @@ class QuoteCell: UITableViewCell {
 			
 			saveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.Label.margin.rawValue),
 			saveButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-			saveButton.heightAnchor.constraint(equalToConstant: Constants.Button.width.rawValue),
-			saveButton.widthAnchor.constraint(equalToConstant: Constants.Button.width.rawValue)
+			saveButton.heightAnchor.constraint(equalToConstant: Constants.Button.side.rawValue),
+			saveButton.widthAnchor.constraint(equalToConstant: Constants.Button.side.rawValue)
 		])
 	}
 	
@@ -82,7 +80,6 @@ class QuoteCell: UITableViewCell {
 	
 	@objc
 	private func didTapSaveButton() {
-		didSave.toggle()
-		saveButton.setImage(saveButtonIcon, for: .normal)
+		didUpdateSavedState?()
 	}
 }

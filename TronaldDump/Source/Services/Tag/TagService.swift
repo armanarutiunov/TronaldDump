@@ -23,6 +23,7 @@ public protocol TagService {
 	func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock)
 	func saveQuote(_ quote: Quote)
 	func deleteQuote(_ quote: Quote)
+	func isQuoteSaved(_ quote: Quote) -> Bool
 }
 
 public class ConcreteTagService: TagService {
@@ -85,6 +86,10 @@ public class ConcreteTagService: TagService {
 	
 	public func deleteQuote(_ quote: Quote) {
 		savedQuotes = savedQuotes.filter { $0 != quote }
+	}
+	
+	public func isQuoteSaved(_ quote: Quote) -> Bool {
+		return savedQuotes.contains(where: { $0 == quote })
 	}
 	
 	// MARK: - Private

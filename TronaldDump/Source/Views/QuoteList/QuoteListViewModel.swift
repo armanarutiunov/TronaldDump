@@ -17,7 +17,9 @@ public protocol QuoteListViewModel {
 	var quotes: [Quote] { get }
 	
 	func sourceUrl(at index: Int) -> URL?
-	func didSaveQuote(_ didSave: Bool, at index: Int)
+	func isQuoteSaved(at index: Int) -> Bool
+	func updateQuoteState(at index: Int)
+	
 	func addObserver(_ observer: QuoteListViewModelObserver)
 	func removeObserver(_ observer: QuoteListViewModelObserver)
 }
@@ -47,8 +49,18 @@ public class ConcreteQuoteListViewModel: QuoteListViewModel {
 		return safeUrl
 	}
 	
-	public func didSaveQuote(_ didSave: Bool, at index: Int) {
+	public func isQuoteSaved(at index: Int) -> Bool {
 		let quote = quotes[index]
+		return tagService.isQuoteSaved(quote)
+	}
+	
+	public func updateQuoteState(at index: Int) {
+		let quote = quotes[index]
+		if tagService.isQuoteSaved(quote) {
+			tagService.deleteQuote(quote)
+		} else {
+			tagService.saveQuote(quote)
+		}
 	}
 	
 	public func addObserver(_ observer: QuoteListViewModelObserver) {

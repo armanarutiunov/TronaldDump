@@ -64,10 +64,17 @@ extension QuoteListViewController: UITableViewDataSource {
 		}
 		let quote = viewModel.quotes[indexPath.row]
 		cell.quoteText = quote.value
-		cell.didUpdateSavedState = { [weak self] didSave in
-			self?.viewModel.didSaveQuote(didSave, at: indexPath.row)
+		cell.saveButtonIcon = icon(at: indexPath.row)
+		cell.didUpdateSavedState = { [weak self] in
+			self?.viewModel.updateQuoteState(at: indexPath.row)
+			cell.saveButtonIcon = self?.icon(at: indexPath.row)
 		}
 		return cell
+	}
+	
+	private func icon(at index: Int) -> UIImage? {
+		let isSaved = viewModel.isQuoteSaved(at: index)
+		return isSaved ? UIImage(named: "save_filled") : UIImage(named: "save_empty")
 	}
 }
 
