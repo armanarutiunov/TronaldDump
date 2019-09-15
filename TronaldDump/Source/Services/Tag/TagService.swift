@@ -32,12 +32,19 @@ public class ConcreteTagService: TagService {
 		static let tag = "tag"
 	}
 	
+	private struct Constants {
+		static let savedQuotesKey = "saved_quotes"
+	}
+	
 	private let cloudService: CloudService
+	private let dataPersistenceService: DataPersistenceService
 	
-	public var savedQuotes = [Quote]()
+	public var savedQuotes: [Quote]
 	
-	init(cloudService: CloudService) {
+	init(cloudService: CloudService, dataPersistenceService: DataPersistenceService) {
 		self.cloudService = cloudService
+		self.dataPersistenceService = dataPersistenceService
+		self.savedQuotes = self.dataPersistenceService.getObject(type: [Quote].self, key: Constants.savedQuotesKey) ?? [Quote]()
 	}
 	
 	public func fetchTags(completion: @escaping FetchTagListCompletionBlock) {
@@ -82,10 +89,12 @@ public class ConcreteTagService: TagService {
 	
 	public func saveQuote(_ quote: Quote) {
 		savedQuotes.append(quote)
+		dataPersistenceService.setObject(savedQuotes, for: Constants.savedQuotesKey)
 	}
 	
 	public func deleteQuote(_ quote: Quote) {
 		savedQuotes = savedQuotes.filter { $0 != quote }
+		dataPersistenceService.setObject(savedQuotes, for: Constants.savedQuotesKey)
 	}
 	
 	public func isQuoteSaved(_ quote: Quote) -> Bool {

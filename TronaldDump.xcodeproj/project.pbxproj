@@ -25,6 +25,7 @@
 		01CA1336232DEA9B00441423 /* QuoteSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */; };
 		01CA1338232DEABC00441423 /* SavedQuotesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */; };
 		01CA133A232DEE6600441423 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1339232DEE6600441423 /* QuoteCell.swift */; };
+		01E85F83232E54DB0012BCAC /* DataPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */; };
 		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
 		01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */; };
@@ -67,6 +68,7 @@
 		01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSearchCoordinator.swift; sourceTree = "<group>"; };
 		01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesCoordinator.swift; sourceTree = "<group>"; };
 		01CA1339232DEE6600441423 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
+		01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceService.swift; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				0104BD23232ADD3D00B48B80 /* ServiceContainer.swift */,
 				01F8AEF5232AF395009CCAE1 /* Cloud */,
 				01F8AF05232B2614009CCAE1 /* Tag */,
+				01E85F84232E54DF0012BCAC /* DataPersistence */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,6 +229,14 @@
 				01CA1339232DEE6600441423 /* QuoteCell.swift */,
 			);
 			path = QuoteList;
+			sourceTree = "<group>";
+		};
+		01E85F84232E54DF0012BCAC /* DataPersistence */ = {
+			isa = PBXGroup;
+			children = (
+				01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */,
+			);
+			path = DataPersistence;
 			sourceTree = "<group>";
 		};
 		01F8AEF5232AF395009CCAE1 /* Cloud */ = {
@@ -350,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CA1330232DAAFF00441423 /* Quote.swift in Sources */,
+				01E85F83232E54DB0012BCAC /* DataPersistenceService.swift in Sources */,
 				0104BD2F232ADED300B48B80 /* TagListViewModel.swift in Sources */,
 				01F8AF07232B2623009CCAE1 /* TagService.swift in Sources */,
 				0104BD33232ADF6E00B48B80 /* TagListView.swift in Sources */,
