@@ -54,3 +54,5 @@ struct Source: Decodable {
 		case urlString = "url"
 	}
 }
+
+extension Quote: Equatable {}

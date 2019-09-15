@@ -17,8 +17,12 @@ public protocol TagService {
 	typealias FetchTagListCompletionBlock = (Result<[String], APIError>) -> Void
 	typealias FetchQuotesCompletionBlock = (Result<[Quote], APIError>) -> Void
 	
+	var savedQuotes: [Quote] { get }
+	
 	func fetchTags(completion: @escaping FetchTagListCompletionBlock)
 	func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock)
+	func saveQuote(_ quote: Quote)
+	func deleteQuote(_ quote: Quote)
 }
 
 public class ConcreteTagService: TagService {
@@ -28,6 +32,8 @@ public class ConcreteTagService: TagService {
 	}
 	
 	private let cloudService: CloudService
+	
+	public var savedQuotes = [Quote]()
 	
 	init(cloudService: CloudService) {
 		self.cloudService = cloudService
@@ -71,6 +77,14 @@ public class ConcreteTagService: TagService {
 				completion(.failure(.cloudFailure))
 			}
 		}
+	}
+	
+	public func saveQuote(_ quote: Quote) {
+		savedQuotes.append(quote)
+	}
+	
+	public func deleteQuote(_ quote: Quote) {
+		savedQuotes = savedQuotes.filter { $0 != quote }
 	}
 	
 	// MARK: - Private

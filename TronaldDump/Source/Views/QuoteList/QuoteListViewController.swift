@@ -64,6 +64,9 @@ extension QuoteListViewController: UITableViewDataSource {
 		}
 		let quote = viewModel.quotes[indexPath.row]
 		cell.quoteText = quote.value
+		cell.didUpdateSavedState = { [weak self] didSave in
+			self?.viewModel.didSaveQuote(didSave, at: indexPath.row)
+		}
 		return cell
 	}
 }
