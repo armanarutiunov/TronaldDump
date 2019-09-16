@@ -17,12 +17,13 @@ public protocol TagService {
 	typealias FetchTagListCompletionBlock = (Result<[String], APIError>) -> Void
 	typealias FetchQuotesCompletionBlock = (Result<[Quote], APIError>) -> Void
 	
+	var savedQuotes: [Quote] { get }
+	
 	func fetchTags(completion: @escaping FetchTagListCompletionBlock)
 	func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock)
 	func saveQuote(_ quote: Quote)
 	func deleteQuote(_ quote: Quote)
 	func isQuoteSaved(_ quote: Quote) -> Bool
-	func fetchSavedQuotes() -> [Quote]
 }
 
 public class ConcreteTagService: TagService {
@@ -37,13 +38,20 @@ public class ConcreteTagService: TagService {
 	
 	private let cloudService: CloudService
 	private let dataPersistenceService: DataPersistenceService
-	private var savedQuotes: [Quote]
+	
+	public var savedQuotes: [Quote] {
+		get {
+			return dataPersistenceService.getObject(type: [Quote].self, key: Constants.savedQuotesKey) ?? [Quote]()
+		}
+		set {
+			dataPersistenceService.setObject(newValue, for: Constants.savedQuotesKey)
+		}
+	}
 	
 	
 	init(cloudService: CloudService, dataPersistenceService: DataPersistenceService) {
 		self.cloudService = cloudService
 		self.dataPersistenceService = dataPersistenceService
-		self.savedQuotes = self.dataPersistenceService.getObject(type: [Quote].self, key: Constants.savedQuotesKey) ?? [Quote]()
 	}
 	
 	public func fetchTags(completion: @escaping FetchTagListCompletionBlock) {
@@ -88,20 +96,16 @@ public class ConcreteTagService: TagService {
 	
 	public func saveQuote(_ quote: Quote) {
 		savedQuotes.append(quote)
-		dataPersistenceService.setObject(savedQuotes, for: Constants.savedQuotesKey)
 	}
 	
 	public func deleteQuote(_ quote: Quote) {
-		savedQuotes = savedQuotes.filter { $0 != quote }
-		dataPersistenceService.setObject(savedQuotes, for: Constants.savedQuotesKey)
+		if let index = savedQuotes.firstIndex(of: quote) {
+			savedQuotes.remove(at: index)
+		}
 	}
 	
 	public func isQuoteSaved(_ quote: Quote) -> Bool {
-		return savedQuotes.contains(where: { $0 == quote })
-	}
-	
-	public func fetchSavedQuotes() -> [Quote] {
-		return savedQuotes
+		return savedQuotes.contains(quote)
 	}
 	
 	// MARK: - Private
