@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class SavedQuotesViewController: UIViewController {
 	
@@ -37,6 +38,24 @@ class SavedQuotesViewController: UIViewController {
 		title = "Saved"
 		savedQuotesView.configureTableView(with: self)
 	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		viewModel.updateQuotes()
+		savedQuotesView.reloadTableView()
+	}
+	
+	private func notifyUserSourceUnknown() {
+		let alertController = UIAlertController(title: "Quote source is unkown", message: nil, preferredStyle: .alert)
+		let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+		alertController.addAction(okAction)
+		present(alertController, animated: true, completion: nil)
+	}
+	
+	private func showSourceViewController(with sourceUrl: URL) {
+		let sourceViewController = SFSafariViewController(url: sourceUrl)
+		present(sourceViewController, animated: true, completion: nil)
+	}
 }
 
 extension SavedQuotesViewController: UITableViewDataSource {
@@ -58,5 +77,10 @@ extension SavedQuotesViewController: UITableViewDataSource {
 extension SavedQuotesViewController: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
+		guard let sourceUrl = viewModel.sourceUrl(at: indexPath.row) else {
+			notifyUserSourceUnknown()
+			return
+		}
+		showSourceViewController(with: sourceUrl)
 	}
 }
