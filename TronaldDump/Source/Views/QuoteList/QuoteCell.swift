@@ -14,6 +14,12 @@ class QuoteCell: UITableViewCell {
 		enum Label: CGFloat {
 			case margin = 15
 		}
+		
+		enum Icon: CGFloat {
+			case margin = 15
+			case side = 25
+		}
+		
 		enum Button: CGFloat {
 			case side = 44
 		}
@@ -21,14 +27,16 @@ class QuoteCell: UITableViewCell {
 	
 	private let quoteLabel = UILabel()
 	private let saveButton = UIButton()
+	private let bookmarkImageView = UIImageView()
+	private var bookmarkIcon: UIImage? {
+		return isBookmarked ? UIImage(named: "bookmark-full") : UIImage(named: "bookmark-empty")
+	}
 	
 	var didUpdateSavedState: (() -> Void)?
 	
-	var saveButtonIcon: UIImage? {
-		get {
-			return saveButton.image(for: .normal)
-		} set {
-			saveButton.setImage(newValue, for: .normal)
+	var isBookmarked = false {
+		didSet {
+			bookmarkImageView.image = bookmarkIcon
 		}
 	}
 	
@@ -55,6 +63,7 @@ class QuoteCell: UITableViewCell {
 	
 	private func addSubviewsAndConstraints() {
 		contentView.addSubview(quoteLabel)
+		contentView.addSubview(bookmarkImageView)
 		contentView.addSubview(saveButton)
 		
 		contentView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
@@ -65,16 +74,21 @@ class QuoteCell: UITableViewCell {
 			quoteLabel.trailingAnchor.constraint(equalTo: saveButton.leadingAnchor, constant: -Constants.Label.margin.rawValue),
 			quoteLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Constants.Label.margin.rawValue),
 			
-			saveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.Label.margin.rawValue),
-			saveButton.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-			saveButton.heightAnchor.constraint(equalToConstant: Constants.Button.side.rawValue),
+			bookmarkImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Constants.Icon.margin.rawValue),
+			bookmarkImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Constants.Icon.margin.rawValue),
+			bookmarkImageView.heightAnchor.constraint(equalToConstant: Constants.Icon.side.rawValue),
+			bookmarkImageView.widthAnchor.constraint(equalToConstant: Constants.Icon.side.rawValue),
+			
+			saveButton.topAnchor.constraint(equalTo: contentView.topAnchor),
+			saveButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+			saveButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
 			saveButton.widthAnchor.constraint(equalToConstant: Constants.Button.side.rawValue)
 		])
 	}
 	
 	private func configureSubviews() {
 		quoteLabel.numberOfLines = 0
-		saveButton.setImage(saveButtonIcon, for: .normal)
+		bookmarkImageView.contentMode = .scaleAspectFit
 		saveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
 	}
 	
