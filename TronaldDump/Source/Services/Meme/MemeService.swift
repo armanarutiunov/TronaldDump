@@ -6,10 +6,10 @@
 //  Copyright © 2019 Arman Arutyunov. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public protocol MemeService {
-	typealias MemeFetchCompletionBlock = (Result<UIImage, APIError>) -> Void
+	typealias MemeFetchCompletionBlock = (Result<Data, APIError>) -> Void
 	
 	func fetchRandomMeme(completion: @escaping MemeFetchCompletionBlock)
 }
@@ -32,11 +32,7 @@ public class ConcreteMemeService: MemeService {
 		cloudService.send(request) { result in
 			switch result {
 			case .success(let data):
-				guard let image = UIImage(data: data) else {
-					completion(.failure(.decodeFailure))
-					return
-				}
-				completion(.success(image))
+				completion(.success(data))
 			case .failure(let error):
 				print("Cloud failure: \(error)")
 				completion(.failure(.cloudFailure))

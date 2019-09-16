@@ -38,8 +38,10 @@ public class ConcreteMemeViewModel: MemeViewModel {
 	public func updateMeme() {
 		memeService.fetchRandomMeme { [weak self] result in
 			switch result {
-			case .success(let image):
-				self?.image = image
+			case .success(let data):
+				if let meme = UIImage(data: data) {
+					self?.image = meme
+				}
 			case .failure(let error):
 				print("Failure: \(error)")
 			}

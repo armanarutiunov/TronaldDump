@@ -34,7 +34,7 @@ class MemeViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		title = "Meme"
+		title = "Memes"
 		viewModel.addObserver(self)
 		setupView()
 	}
