@@ -18,6 +18,8 @@ class MemeCoordinator: Coordinator {
 	}
 	
 	func start() {
-		
+		let viewModel = ConcreteMemeViewModel(memeService: serviceContainer.memeService)
+		let viewController = MemeViewController(viewModel: viewModel)
+		navigationController.pushViewController(viewController, animated: false)
 	}
 }

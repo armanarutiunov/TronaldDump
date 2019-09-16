@@ -22,4 +22,8 @@ public struct ServiceContainer {
 		return ConcreteDataPersistenceService()
 	}()
 	
+	lazy var memeService: MemeService = {
+		return ConcreteMemeService(cloudService: cloudService)
+	}()
+	
 }
