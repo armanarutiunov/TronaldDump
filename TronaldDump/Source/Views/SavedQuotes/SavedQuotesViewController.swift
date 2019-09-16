@@ -82,4 +82,12 @@ extension SavedQuotesViewController: UITableViewDelegate {
 		}
 		showSourceViewController(with: sourceUrl)
 	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+		guard editingStyle == .delete else {
+			return
+		}
+		viewModel.deleteQuote(at: indexPath.row)
+		tableView.deleteRows(at: [indexPath], with: .fade)
+	}
 }

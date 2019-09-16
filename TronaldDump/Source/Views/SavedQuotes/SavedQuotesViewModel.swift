@@ -12,6 +12,7 @@ public protocol SavedQuotesViewModel {
 	var quotes: [Quote] { get }
 	
 	func sourceUrl(at index: Int) -> URL?
+	func deleteQuote(at index: Int)
 }
 
 public class ConcreteSavedQuotesViewModel: SavedQuotesViewModel {
@@ -31,5 +32,10 @@ public class ConcreteSavedQuotesViewModel: SavedQuotesViewModel {
 			return nil
 		}
 		return safeUrl
+	}
+	
+	public func deleteQuote(at index: Int) {
+		let quote = quotes[index]
+		tagService.deleteQuote(quote)
 	}
 }
