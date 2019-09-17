@@ -11,6 +11,7 @@ import Foundation
 public struct CloudRequest {
 	
     let identifier: UUID
+	let baseUrl: URL
     let route: String
     let httpMethod: HTTPMethod
     let bodyData: Data?
@@ -18,18 +19,20 @@ public struct CloudRequest {
 	
 	public var url: URL {
 		guard let encodedRoute = route.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-			let url = URL(string: encodedRoute, relativeTo: CloudConfiguration.baseUrl) else {
-				fatalError("Failed to create CloudRequest url from path: \(route) and relative-Url: \(CloudConfiguration.baseUrl.absoluteString)")
+			let url = URL(string: encodedRoute, relativeTo: baseUrl) else {
+				fatalError("Failed to create CloudRequest url from path: \(route) and relative-Url: \(baseUrl.absoluteString)")
 		}
 		return url
 	}
 	
     public init(identifier: UUID = UUID(),
+				baseUrl: URL = CloudConfiguration.baseUrl,
                 route: String,
                 httpMethod: HTTPMethod = .get,
                 bodyData: Data? = nil,
                 additionalHTTPHeader: [String: String] = CloudConfiguration.header) {
         self.identifier = identifier
+		self.baseUrl = baseUrl
         self.route = route
         self.httpMethod = httpMethod
         self.bodyData = bodyData
