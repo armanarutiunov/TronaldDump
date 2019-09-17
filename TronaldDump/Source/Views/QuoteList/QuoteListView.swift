@@ -36,6 +36,10 @@ class QuoteListView: UIView {
 		tableView.tableFooterView = UIView()
 	}
 	
+	func setTableHeaderView(_ view: UIView) {
+		tableView.tableHeaderView = view
+	}
+	
 	func reloadTableView() {
 		tableView.reloadData()
 	}

@@ -42,6 +42,11 @@ class QuoteListViewController: UIViewController {
 		configureSearchController()
     }
 	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		quoteListView.reloadTableView()
+	}
+	
 	// MARK: - Private
 	
 	private func configureSearchController() {
@@ -50,6 +55,8 @@ class QuoteListViewController: UIViewController {
 		}
 		if #available(iOS 11.0, *) {
 			navigationItem.searchController = searchController
+		} else {
+			quoteListView.setTableHeaderView(searchController.searchBar)
 		}
 		definesPresentationContext = true
 		searchController.searchResultsUpdater = self
@@ -117,6 +124,10 @@ extension QuoteListViewController: UISearchBarDelegate {
 			viewModel.searchQuotes(with: query)
 		}
 	}
+	
+//	override func becomeFirstResponder() -> Bool {
+//		searchb
+//	}
 }
 
 extension QuoteListViewController: UISearchResultsUpdating {
