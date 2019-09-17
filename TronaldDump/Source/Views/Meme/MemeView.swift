@@ -82,12 +82,21 @@ class MemeView: UIView {
     }
 	
 	private func configureSubviews() {
-		backgroundColor = .white
+		configureTheme()
 		memeImageView.contentMode = .scaleAspectFit
-		
-		updateMemeButton.backgroundColor = .black
-		updateMemeButton.setTitleColor(.white, for: .normal)
 		updateMemeButton.addTarget(self, action: #selector(didTapUpdateMemeButtonAction), for: .touchUpInside)
+	}
+	
+	private func configureTheme() {
+		let isDarkMode: Bool
+		if #available(iOS 12.0, *) {
+			isDarkMode = traitCollection.userInterfaceStyle == .dark
+		} else {
+			isDarkMode = false
+		}
+		backgroundColor = isDarkMode ? .black : .white
+		updateMemeButton.backgroundColor = isDarkMode ? .white : .black
+		updateMemeButton.setTitleColor(isDarkMode ? .black : .white, for: .normal)
 	}
 	
 	@objc
