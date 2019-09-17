@@ -55,6 +55,12 @@ public struct Quote: Codable {
 		case sourcesEncodingFailure
 	}
 	
+	public init(id: String, value: String, urls: [URL?]) {
+		self.id = id
+		self.value = value
+		self.urls = urls
+	}
+	
 	public init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
 		id = try container.decode(String.self, forKey: .id)
