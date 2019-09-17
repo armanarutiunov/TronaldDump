@@ -12,6 +12,7 @@ import SafariServices
 class QuoteListViewController: UIViewController {
 	
 	private let viewModel: QuoteListViewModel
+	private let searchController = UISearchController(searchResultsController: nil)
 	
 	private var quoteListView: QuoteListView {
 		guard let view = view as? QuoteListView else {
@@ -38,7 +39,24 @@ class QuoteListViewController: UIViewController {
 		title = viewModel.tagTitle
 		quoteListView.configureTableView(with: self)
 		viewModel.addObserver(self)
+		configureSearchController()
     }
+	
+	// MARK: - Private
+	
+	private func configureSearchController() {
+		guard viewModel.isSearchEnabled else {
+			return
+		}
+		if #available(iOS 11.0, *) {
+			navigationItem.searchController = searchController
+		}
+		definesPresentationContext = true
+		searchController.searchResultsUpdater = self
+		searchController.obscuresBackgroundDuringPresentation = false
+		searchController.searchBar.placeholder = "Search"
+		searchController.searchBar.delegate = self
+	}
 	
 	private func notifyUserSourceUnknown() {
 		let alertController = UIAlertController(title: "Quote source is unkown", message: nil, preferredStyle: .alert)
@@ -91,5 +109,21 @@ extension QuoteListViewController: QuoteListViewModelObserver {
 	func didFetchQuotes() {
 		quoteListView.reloadTableView()
 	}
-	
 }
+
+extension QuoteListViewController: UISearchBarDelegate {
+	func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+		if let query = searchBar.text {
+			viewModel.searchQuotes(with: query)
+		}
+	}
+}
+
+extension QuoteListViewController: UISearchResultsUpdating {
+	func updateSearchResults(for searchController: UISearchController) {
+		if let query = searchController.searchBar.text {
+			viewModel.searchQuotes(with: query)
+		}
+	}
+}
+

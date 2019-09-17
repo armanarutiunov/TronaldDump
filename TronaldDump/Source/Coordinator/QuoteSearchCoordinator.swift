@@ -18,6 +18,8 @@ class QuoteSearchCoordinator: Coordinator {
 	}
 	
 	func start() {
-		
+		let viewModel = ConcreteQuoteListViewModel(tagService: serviceContainer.tagService, tagTitle: "Search", isSearchEnabled: true)
+		let viewController = QuoteListViewController(viewModel: viewModel)
+		navigationController.pushViewController(viewController, animated: false)
 	}
 }

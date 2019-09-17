@@ -21,6 +21,7 @@ public protocol TagService {
 	
 	func fetchTags(completion: @escaping FetchTagListCompletionBlock)
 	func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock)
+	func searchQuotes(with query: String, completion: @escaping FetchQuotesCompletionBlock)
 	func saveQuote(_ quote: Quote)
 	func deleteQuote(_ quote: Quote)
 	func isQuoteSaved(_ quote: Quote) -> Bool
@@ -30,6 +31,7 @@ public class ConcreteTagService: TagService {
 	
 	private struct Endpoints {
 		static let tag = "tag"
+		static let search = "search/quote?query"
 	}
 	
 	private struct Constants {
@@ -82,7 +84,27 @@ public class ConcreteTagService: TagService {
 			}
 			switch result {
 			case .success(let data):
-				guard let quotes = self.decodeQuoteList(from: data) else {
+				guard let quotes = self.decodeQuoteList(from: data, isSearchData: false) else {
+					completion(.failure(.decodeFailure))
+					return
+				}
+				completion(.success(quotes))
+			case .failure(let error):
+				print("Cloud failure: \(error)")
+				completion(.failure(.cloudFailure))
+			}
+		}
+	}
+	
+	public func searchQuotes(with query: String, completion: @escaping FetchQuotesCompletionBlock) {
+		let request = CloudRequest(route: "\(Endpoints.search)=\(query)")
+		cloudService.send(request) { [weak self] result in
+			guard let self = self else {
+				return
+			}
+			switch result {
+			case .success(let data):
+				guard let quotes = self.decodeQuoteList(from: data, isSearchData: true) else {
 					completion(.failure(.decodeFailure))
 					return
 				}
@@ -120,10 +142,13 @@ public class ConcreteTagService: TagService {
 		return nil
 	}
 	
-	private func decodeQuoteList(from data: Data) -> [Quote]? {
+	private func decodeQuoteList(from data: Data, isSearchData: Bool) -> [Quote]? {
 		do {
-			let quoteListResponse = try JSONDecoder().decode(QuoteListResponse.self, from: data)
-			return quoteListResponse.quotes
+			let quoteResponse: QuoteResponse
+			quoteResponse = isSearchData ?
+				try JSONDecoder().decode(QuoteSearchResponse.self, from: data) :
+				try JSONDecoder().decode(QuoteListResponse.self, from: data)
+			return quoteResponse.quotes
 		} catch {
 			print("Failed to decode data: \n\(String(describing: String(data: data, encoding: .utf8))). \nError: \(error)")
 		}

@@ -27,7 +27,7 @@ class TagCoordinator: Coordinator {
 	}
 	
 	func goToTagScreen(_ tagTitle: String) {
-		let viewModel = ConcreteQuoteListViewModel(tagService: serviceContainer.tagService, tagTitle: tagTitle)
+		let viewModel = ConcreteQuoteListViewModel(tagService: serviceContainer.tagService, tagTitle: tagTitle, isSearchEnabled: false)
 		let viewController = QuoteListViewController(viewModel: viewModel)
 		navigationController.pushViewController(viewController, animated: true)
 	}

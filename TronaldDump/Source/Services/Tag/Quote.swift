@@ -8,17 +8,32 @@
 
 import Foundation
 
-struct QuoteListResponse: Decodable {
+protocol QuoteResponse: Decodable {
+	var quotes: [Quote] { get }
+}
+
+enum QuoteResponseCodingKeys: String, CodingKey {
+	case embedded = "_embedded"
+	case quotes
+	case tags
+}
+
+struct QuoteListResponse: QuoteResponse {
 	let quotes: [Quote]
 	
-	enum CodingKeys: String, CodingKey {
-		case embedded = "_embedded"
-		case quotes = "tags"
+	public init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: QuoteResponseCodingKeys.self)
+			.nestedContainer(keyedBy: QuoteResponseCodingKeys.self, forKey: .embedded)
+		quotes = try container.decode([Quote].self, forKey: .tags)
 	}
+}
+
+struct QuoteSearchResponse: QuoteResponse {
+	let quotes: [Quote]
 	
 	public init(from decoder: Decoder) throws {
-		let container = try decoder.container(keyedBy: CodingKeys.self)
-			.nestedContainer(keyedBy: CodingKeys.self, forKey: .embedded)
+		let container = try decoder.container(keyedBy: QuoteResponseCodingKeys.self)
+			.nestedContainer(keyedBy: QuoteResponseCodingKeys.self, forKey: .embedded)
 		quotes = try container.decode([Quote].self, forKey: .quotes)
 	}
 }

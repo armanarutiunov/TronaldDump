@@ -17,7 +17,7 @@ public struct CloudRequest {
     let additionalHTTPHeader: [String: String]
 	
 	public var url: URL {
-		guard let encodedRoute = route.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed),
+		guard let encodedRoute = route.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
 			let url = URL(string: encodedRoute, relativeTo: CloudConfiguration.baseUrl) else {
 				fatalError("Failed to create CloudRequest url from path: \(route) and relative-Url: \(CloudConfiguration.baseUrl.absoluteString)")
 		}
