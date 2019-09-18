@@ -22,33 +22,29 @@ class MainCoordinator: Coordinator {
 	private let tabBarController: UITabBarController
 	
 	private lazy var tagCoordinator: Coordinator = {
-		let navigationController = UINavigationController()
-		navigationController.tabBarItem = UITabBarItem(title: "Tags", image: nil, selectedImage: nil)
-		let tagCoordinator = TagCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
+		let controller = navigationController(title: "Tags", image: UIImage(named: "tags"))
+		let tagCoordinator = TagCoordinator(navigationController: controller, serviceContainer: serviceContainer)
 		tagCoordinator.start()
 		return tagCoordinator
 	}()
 	
 	private lazy var quoteSearchCoordinator: Coordinator = {
-		let navigationController = UINavigationController()
-		navigationController.tabBarItem = UITabBarItem(title: "Search", image: nil, selectedImage: nil)
-		let coordinator = QuoteSearchCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
+		let controller = navigationController(title: "Search", image: UIImage(named: "search"))
+		let coordinator = QuoteSearchCoordinator(navigationController: controller, serviceContainer: serviceContainer)
 		coordinator.start()
 		return coordinator
 	}()
 	
 	private lazy var savedQuotesCoordinator: Coordinator = {
-		let navigationController = UINavigationController()
-		navigationController.tabBarItem = UITabBarItem(title: "Saved", image: nil, selectedImage: nil)
-		let coordinator = SavedQuoteCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
+		let controller = navigationController(title: "Saved", image: UIImage(named: "saved"))
+		let coordinator = SavedQuoteCoordinator(navigationController: controller, serviceContainer: serviceContainer)
 		coordinator.start()
 		return coordinator
 	}()
 	
 	private lazy var memeCoordinator: Coordinator = {
-		let navigationController = UINavigationController()
-		navigationController.tabBarItem = UITabBarItem(title: "Memes", image: nil, selectedImage: nil)
-		let coordinator = MemeCoordinator(navigationController: navigationController, serviceContainer: serviceContainer)
+		let controller = navigationController(title: "Memes", image: UIImage(named: "memes"))
+		let coordinator = MemeCoordinator(navigationController: controller, serviceContainer: serviceContainer)
 		coordinator.start()
 		return coordinator
 	}()
@@ -64,5 +60,12 @@ class MainCoordinator: Coordinator {
 							   savedQuotesCoordinator.navigationController,
 							   memeCoordinator.navigationController]
 		tabBarController.setViewControllers(viewControllers, animated: false)
+	}
+	
+	private func navigationController(title: String, image: UIImage?) -> UINavigationController {
+		let navigationController = UINavigationController()
+		navigationController.tabBarItem.title = title
+		navigationController.tabBarItem.image = image
+		return navigationController
 	}
 }

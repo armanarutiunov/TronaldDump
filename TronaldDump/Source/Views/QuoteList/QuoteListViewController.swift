@@ -38,7 +38,6 @@ class QuoteListViewController: UIViewController {
         super.viewDidLoad()
 		title = viewModel.tagTitle
 		quoteListView.configureTableView(with: self)
-		quoteListView.noResultsText = "No results for your query"
 		viewModel.addObserver(self)
 		configureSearchController()
     }
@@ -65,6 +64,7 @@ class QuoteListViewController: UIViewController {
 		searchController.obscuresBackgroundDuringPresentation = false
 		searchController.searchBar.placeholder = "Search"
 		searchController.searchBar.delegate = self
+		quoteListView.noResultsText = "No results for your query"
 	}
 	
 	private func notifyUserSourceUnknown() {
