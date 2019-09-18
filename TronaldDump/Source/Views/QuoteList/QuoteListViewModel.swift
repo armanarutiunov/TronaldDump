@@ -73,6 +73,7 @@ public class ConcreteQuoteListViewModel: QuoteListViewModel {
     
     public func searchQuotes(with query: String) {
         guard query.count >= 3 else {
+            quotes = [Quote]()
             return
         }
         tagService.searchQuotes(with: query) { [weak self] result in
