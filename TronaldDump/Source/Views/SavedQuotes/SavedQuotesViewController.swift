@@ -37,6 +37,7 @@ class SavedQuotesViewController: UIViewController {
         super.viewDidLoad()
 		title = "Saved"
 		savedQuotesView.configureTableView(with: self)
+		savedQuotesView.noResultsText = "No saved quotes found"
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -89,5 +90,6 @@ extension SavedQuotesViewController: UITableViewDelegate {
 		}
 		viewModel.deleteQuote(at: indexPath.row)
 		tableView.deleteRows(at: [indexPath], with: .fade)
+		savedQuotesView.reloadTableView()
 	}
 }
