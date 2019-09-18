@@ -41,6 +41,9 @@
 		01E85FB02330804F0012BCAC /* TagServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FAF2330804F0012BCAC /* TagServiceTests.swift */; };
 		01E85FB22330826A0012BCAC /* CloudServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FB12330826A0012BCAC /* CloudServiceMock.swift */; };
 		01E85FB4233082BA0012BCAC /* DataPersistenceServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FB3233082BA0012BCAC /* DataPersistenceServiceMock.swift */; };
+		01E85FB92331B6830012BCAC /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 01E85FB72331B6830012BCAC /* quotes.json */; };
+		01E85FBA2331B6830012BCAC /* quote-search.json in Resources */ = {isa = PBXBuildFile; fileRef = 01E85FB82331B6830012BCAC /* quote-search.json */; };
+		01E85FBC2331B9880012BCAC /* tags.json in Resources */ = {isa = PBXBuildFile; fileRef = 01E85FBB2331B9880012BCAC /* tags.json */; };
 		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
 		01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */; };
@@ -99,6 +102,9 @@
 		01E85FAF2330804F0012BCAC /* TagServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagServiceTests.swift; sourceTree = "<group>"; };
 		01E85FB12330826A0012BCAC /* CloudServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudServiceMock.swift; sourceTree = "<group>"; };
 		01E85FB3233082BA0012BCAC /* DataPersistenceServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceServiceMock.swift; sourceTree = "<group>"; };
+		01E85FB72331B6830012BCAC /* quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
+		01E85FB82331B6830012BCAC /* quote-search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "quote-search.json"; sourceTree = "<group>"; };
+		01E85FBB2331B9880012BCAC /* tags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tags.json; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
 		01F8AEF8232AF4A8009CCAE1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
@@ -333,6 +339,9 @@
 		01E85FAE233078890012BCAC /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				01E85FB82331B6830012BCAC /* quote-search.json */,
+				01E85FB72331B6830012BCAC /* quotes.json */,
+				01E85FBB2331B9880012BCAC /* tags.json */,
 				01E85FAC233076E40012BCAC /* TagServiceMock.swift */,
 				01E85FB12330826A0012BCAC /* CloudServiceMock.swift */,
 				01E85FB3233082BA0012BCAC /* DataPersistenceServiceMock.swift */,
@@ -451,6 +460,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01E85FBA2331B6830012BCAC /* quote-search.json in Resources */,
+				01E85FB92331B6830012BCAC /* quotes.json in Resources */,
+				01E85FBC2331B9880012BCAC /* tags.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

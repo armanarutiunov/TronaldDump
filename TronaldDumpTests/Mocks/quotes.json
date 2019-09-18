@@ -1,0 +1,950 @@
+{
+  "count": 25,
+  "total": 277,
+  "_embedded": {
+    "tags": [
+      {
+        "appeared_at": "2016-10-10T00:00:00",
+        "created_at": "2016-11-14T01:15:13.463208",
+        "quote_id": "YqNjg0CWTfeaBjFGnfN_mw",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-14T01:15:13.463208",
+        "value": "Hypocrite! Hillary Clinton claims she needs a \"public and a private stance\" in discussions with Wall Street banks.",
+        "_links": {
+          "self": {
+            "href": "/quote/YqNjg0CWTfeaBjFGnfN_mw"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-14T01:15:13.359701",
+              "filename": null,
+              "quote_source_id": "in8rU9GMRxeeweuLiqz8yg",
+              "remarks": null,
+              "updated_at": "2016-11-14T01:15:13.359701",
+              "url": "https://twitter.com/realDonaldTrump/status/785296480672382979"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-22T00:00:00",
+        "created_at": "2016-11-14T01:18:19.912725",
+        "quote_id": "tQw5s7yDQhiTHhXwagN4eg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-14T01:18:19.912725",
+        "value": "#CrookedHillary sending U.S. intelligence info. to Podesta’s hacked email is ‘unquestionably an OPSEC violation’",
+        "_links": {
+          "self": {
+            "href": "/quote/tQw5s7yDQhiTHhXwagN4eg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-14T01:18:19.858765",
+              "filename": null,
+              "quote_source_id": "OEQgczdER7ePhLXysL-_kg",
+              "remarks": null,
+              "updated_at": "2016-11-14T01:18:19.858765",
+              "url": "https://twitter.com/realDonaldTrump/status/789599646821806085"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-22T00:00:00",
+        "created_at": "2016-11-14T01:19:43.346344",
+        "quote_id": "7GRjR4JtSiSr5E1kRsUYXA",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-14T01:19:43.346344",
+        "value": "\"{Crooked Hillary Clinton} created this mess, and she knows it.\" #DrainTheSwamp",
+        "_links": {
+          "self": {
+            "href": "/quote/7GRjR4JtSiSr5E1kRsUYXA"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-14T01:19:43.325890",
+              "filename": null,
+              "quote_source_id": "ZW0YQfSPRYST47bSHPGyAQ",
+              "remarks": null,
+              "updated_at": "2016-11-14T01:19:43.325890",
+              "url": "https://twitter.com/realDonaldTrump/status/789594671387447297"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-20T00:00:00",
+        "created_at": "2016-11-14T01:20:31.473661",
+        "quote_id": "XcRoQKbpRii4GGDvL7Rq7A",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-14T01:20:31.473661",
+        "value": "She'll say anything and change NOTHING! #MAGA #BigLeagueTruth",
+        "_links": {
+          "self": {
+            "href": "/quote/XcRoQKbpRii4GGDvL7Rq7A"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-14T01:20:31.379616",
+              "filename": null,
+              "quote_source_id": "L-wkSzDjRPWswc3jz7MkdA",
+              "remarks": null,
+              "updated_at": "2016-11-14T01:20:31.379616",
+              "url": "https://twitter.com/realDonaldTrump/status/788922326729367552"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-06-26T22:15:40",
+        "created_at": "2016-11-20T01:30:51.752866",
+        "quote_id": "euKVPx1FTSmkpnbPGTB18w",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:30:51.752866",
+        "value": "Crooked Hillary Clinton got Brexit wrong. I said LEAVE will win. She has no sense of markets and such bad judgement. Only a question of time",
+        "_links": {
+          "self": {
+            "href": "/quote/euKVPx1FTSmkpnbPGTB18w"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:30:50.183685",
+              "filename": null,
+              "quote_source_id": "CDUrW0fDQj-o-ljz4wN_PQ",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:30:50.183685",
+              "url": "https://twitter.com/realDonaldTrump/status/747191624535511040"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-08-26T02:45:11",
+        "created_at": "2016-11-20T01:31:53.340261",
+        "quote_id": "Jv7VtxvwSq-cuN27yMFs5w",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:53.340261",
+        "value": "CLINTON CORRUPTION AND HER SABOTAGE OF THE INNER CITIES. \nFull speech transcript: https://t.co/npswT6lbg3",
+        "_links": {
+          "self": {
+            "href": "/quote/Jv7VtxvwSq-cuN27yMFs5w"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:52.947308",
+              "filename": null,
+              "quote_source_id": "NETeI7DuR5W7Ja2bui4AxA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:52.947308",
+              "url": "https://twitter.com/realDonaldTrump/status/769002724218118144"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-20T01:58:34",
+        "created_at": "2016-11-20T01:30:56.535390",
+        "quote_id": "caiW1OSjQk6GTh4NcQpcTg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:30:56.535390",
+        "value": "She'll say anything and change NOTHING! #MAGA #BigLeagueTruth https://t.co/6E767Uw6Dj",
+        "_links": {
+          "self": {
+            "href": "/quote/caiW1OSjQk6GTh4NcQpcTg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:30:55.790139",
+              "filename": null,
+              "quote_source_id": "7hcJXHyKSPWSO4jtEXB2fA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:30:55.790139",
+              "url": "https://twitter.com/realDonaldTrump/status/788922326729367552"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-07-29T17:43:52",
+        "created_at": "2016-11-20T01:31:01.149346",
+        "quote_id": "DeSd-G-gSJiV_DDgb-Mo5A",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:01.149346",
+        "value": "I am watching Crooked Hillary speak. Same old stuff, our country needs change!",
+        "_links": {
+          "self": {
+            "href": "/quote/DeSd-G-gSJiV_DDgb-Mo5A"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:00.352053",
+              "filename": null,
+              "quote_source_id": "3aEtV_PUTZmfG0UcsYsv6w",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:00.352053",
+              "url": "https://twitter.com/realDonaldTrump/status/759082026687352834"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-11T23:04:25",
+        "created_at": "2016-11-20T01:31:02.318587",
+        "quote_id": "FObRdd6iT52XbLNOIAm8YQ",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:02.318587",
+        "value": "Wow, CNN Town Hall questions were given to Crooked Hillary Clinton in advance of big debates against Bernie Sanders. Hillary & CNN FRAUD!",
+        "_links": {
+          "self": {
+            "href": "/quote/FObRdd6iT52XbLNOIAm8YQ"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:01.670641",
+              "filename": null,
+              "quote_source_id": "t8ady1UaSdWXysNVu9D-Kw",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:01.670641",
+              "url": "https://twitter.com/realDonaldTrump/status/785979396620324865"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-08-06T20:04:08",
+        "created_at": "2016-11-20T01:31:06.416697",
+        "quote_id": "aDyy5-6RRtCPY15pYeS7Jg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:06.416697",
+        "value": "#CrookedHillary is not fit to be our next president! #TrumpPence16 \nhttps://t.co/I0zJO2sZKk",
+        "_links": {
+          "self": {
+            "href": "/quote/aDyy5-6RRtCPY15pYeS7Jg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:05.651367",
+              "filename": null,
+              "quote_source_id": "OHLahvKWRrOppMdQJFUTVQ",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:05.651367",
+              "url": "https://twitter.com/realDonaldTrump/status/762016426102296576"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-17T22:51:31",
+        "created_at": "2016-11-20T01:31:38.878861",
+        "quote_id": "d1NDHhK4QSCie2_iSr37Bg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:38.878861",
+        "value": "Get rich quick! Crooked Hillary Clinton's pay to play guide: https://t.co/uKh5sCFfrv",
+        "_links": {
+          "self": {
+            "href": "/quote/d1NDHhK4QSCie2_iSr37Bg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:38.411156",
+              "filename": null,
+              "quote_source_id": "N41LZiIwTWuvR2RjrCW1LQ",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:38.411156",
+              "url": "https://twitter.com/realDonaldTrump/status/788150475258343424"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-06-03T13:13:50",
+        "created_at": "2016-11-20T01:31:40.442366",
+        "quote_id": "FD-bbzfeR8-FWuPUGRVqrg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:40.442366",
+        "value": "In Crooked Hillary's telepromter speech yesterday, she made up things that I said or believe but have no basis in fact. Not honest!",
+        "_links": {
+          "self": {
+            "href": "/quote/FD-bbzfeR8-FWuPUGRVqrg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:39.910663",
+              "filename": null,
+              "quote_source_id": "0-4RwS84Qguy3wRcKjCYYw",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:39.910663",
+              "url": "https://twitter.com/realDonaldTrump/status/738720347239809024"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-20T02:16:25",
+        "created_at": "2016-11-20T01:31:43.306991",
+        "quote_id": "T5P-05I0Sci0fk2s1vIakg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:43.306991",
+        "value": "HILLARY FAILED ALL OVER THE WORLD. #BigLeagueTruth  \n❌LIBYA\n❌SYRIA\n❌IRAN\n❌IRAQ\n❌ASIA PIVOT\n❌RUSSIAN RESET\n❌BENGHAZI… https://t.co/H1UH0svtt2",
+        "_links": {
+          "self": {
+            "href": "/quote/T5P-05I0Sci0fk2s1vIakg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:42.877547",
+              "filename": null,
+              "quote_source_id": "NJbr3hDJTBeyfPjl8mlDAg",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:42.877547",
+              "url": "https://twitter.com/realDonaldTrump/status/788926818162139136"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-05-02T11:12:40",
+        "created_at": "2016-11-20T01:31:44.651256",
+        "quote_id": "SCQqrDc1SjW0queUxuacdQ",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:44.651256",
+        "value": "Crooked Hillary Clinton said she is used to \"dealing with men who get off the reservation.\" Actually, she has done poorly with such men!",
+        "_links": {
+          "self": {
+            "href": "/quote/SCQqrDc1SjW0queUxuacdQ"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:44.167817",
+              "filename": null,
+              "quote_source_id": "hg1M2vfiSeqyMrE1H4E9VQ",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:44.167817",
+              "url": "https://twitter.com/realDonaldTrump/status/727093442325680128"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-09-04T23:17:38",
+        "created_at": "2016-11-20T01:31:47.071162",
+        "quote_id": "RyBIbgyQSLCjpQP0sGM6_A",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:47.071162",
+        "value": "The polls are close so Crooked Hillary is getting out of bed and will campaign tomorrow.Why did she hammer 13 devices and acid-wash e-mails?",
+        "_links": {
+          "self": {
+            "href": "/quote/RyBIbgyQSLCjpQP0sGM6_A"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:46.645659",
+              "filename": null,
+              "quote_source_id": "0_tX2Px0T72BQ0n-XS-mSQ",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:46.645659",
+              "url": "https://twitter.com/realDonaldTrump/status/772574369633763329"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-07-26T03:12:57",
+        "created_at": "2016-11-20T01:31:49.263191",
+        "quote_id": "Q59Av8YZTWCRzo1aSUDGnw",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:49.263191",
+        "value": "Elizabeth Warren, often referred to as Pocahontas, just misrepresented me and spoke glowingly about Crooked Hillary, who she always hated!",
+        "_links": {
+          "self": {
+            "href": "/quote/Q59Av8YZTWCRzo1aSUDGnw"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:48.754676",
+              "filename": null,
+              "quote_source_id": "4zmbF6cVQGW3oihrF0J0BA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:48.754676",
+              "url": "https://twitter.com/realDonaldTrump/status/757775689525309440"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-08-03T09:14:40",
+        "created_at": "2016-11-20T01:31:50.166713",
+        "quote_id": "E4lu1jYjT3-KwBqm9GqOhw",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:50.166713",
+        "value": "There is great unity in my campaign, perhaps greater than ever before. I want to thank everyone for your tremendous support. Beat Crooked H!",
+        "_links": {
+          "self": {
+            "href": "/quote/E4lu1jYjT3-KwBqm9GqOhw"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:49.771700",
+              "filename": null,
+              "quote_source_id": "QUYUB06RSL6O_m7KvXMAsg",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:49.771700",
+              "url": "https://twitter.com/realDonaldTrump/status/760765818917515264"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-07-08T01:52:04",
+        "created_at": "2016-11-20T01:41:50.174759",
+        "quote_id": "M8CJQ3ZNQcSNCa3nvnLIqQ",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:41:50.174759",
+        "value": "After today, Crooked Hillary can officially be called Lyin' Crooked Hillary.",
+        "_links": {
+          "self": {
+            "href": "/quote/M8CJQ3ZNQcSNCa3nvnLIqQ"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:41:49.758868",
+              "filename": null,
+              "quote_source_id": "5Pd8fBrVRY6Ks_t-aHOVlA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:41:49.758868",
+              "url": "https://twitter.com/realDonaldTrump/status/751232353129955328"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-07-31T20:09:00",
+        "created_at": "2016-11-20T01:31:54.281207",
+        "quote_id": "ADP19NTYQuqNkVrtPRqFYQ",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:54.281207",
+        "value": "The dishonest media is fawning over the Democratic Convention. I wonder why, then, my speech had millions of more viewers than Crooked H?",
+        "_links": {
+          "self": {
+            "href": "/quote/ADP19NTYQuqNkVrtPRqFYQ"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:53.856645",
+              "filename": null,
+              "quote_source_id": "8myxDwKnQUOoWcbgBGuVVA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:53.856645",
+              "url": "https://twitter.com/realDonaldTrump/status/759843323909668865"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-07-30T01:01:43",
+        "created_at": "2016-11-20T01:31:59.378567",
+        "quote_id": "FkV4a5CfRU6Hj4yKj3Sfig",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:31:59.378567",
+        "value": "#CrookedHillary Job Application https://t.co/CKXkAlGSiV",
+        "_links": {
+          "self": {
+            "href": "/quote/FkV4a5CfRU6Hj4yKj3Sfig"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:31:58.924496",
+              "filename": null,
+              "quote_source_id": "U8yg6RFKR_Gh2PMoU_yIUA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:31:58.924496",
+              "url": "https://twitter.com/realDonaldTrump/status/759192213234393088"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-10-10T01:28:36",
+        "created_at": "2016-11-20T01:32:01.238195",
+        "quote_id": "e-kzvT1URoa7-klAGAI26Q",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:32:01.238195",
+        "value": "Basically nothing Hillary has said about her secret server has been true. #CrookedHillary",
+        "_links": {
+          "self": {
+            "href": "/quote/e-kzvT1URoa7-klAGAI26Q"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:32:00.845412",
+              "filename": null,
+              "quote_source_id": "NCuV0j9GQUm739H9d1GnEw",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:32:00.845412",
+              "url": "https://twitter.com/realDonaldTrump/status/785290904093491200"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-06-26T22:28:32",
+        "created_at": "2016-11-20T01:32:02.227494",
+        "quote_id": "MYY3u_skQ7u-iQe4e0SsIQ",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:32:02.227494",
+        "value": "Crooked Hillary Attacks Foreign Government Donations - While Ignoring Her Own: https://t.co/pr3BSHJSxL",
+        "_links": {
+          "self": {
+            "href": "/quote/MYY3u_skQ7u-iQe4e0SsIQ"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:32:01.819384",
+              "filename": null,
+              "quote_source_id": "FOaTMAmhSQC_UEOwHYH83w",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:32:01.819384",
+              "url": "https://twitter.com/realDonaldTrump/status/747194865633595392"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-09-17T21:38:50",
+        "created_at": "2016-11-20T01:32:03.183389",
+        "quote_id": "QSYsMLOWSCWO49sd80WL4g",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:32:03.183389",
+        "value": "The failing The New York Times has gone nuts that Crooked Hillary is doing so badly. They are willing to say anything, has become a laughingstock rag!",
+        "_links": {
+          "self": {
+            "href": "/quote/QSYsMLOWSCWO49sd80WL4g"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:32:02.771681",
+              "filename": null,
+              "quote_source_id": "ARrZBwlhR2GnSEkFMCJj8Q",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:32:02.771681",
+              "url": "https://twitter.com/realDonaldTrump/status/777260548991819776"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2015-12-09T13:17:21",
+        "created_at": "2016-11-20T01:32:04.172874",
+        "quote_id": "F-EhHQToQ66UDv8C1r_lsQ",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:32:04.172874",
+        "value": "Hillary Clinton does not have the STRENGTH or STAMINA to be President. We need strong and super smart for our next leader - or trouble!",
+        "_links": {
+          "self": {
+            "href": "/quote/F-EhHQToQ66UDv8C1r_lsQ"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:32:03.697565",
+              "filename": null,
+              "quote_source_id": "9gqclA5eRASi2o_fZ3bfDg",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:32:03.697565",
+              "url": "https://twitter.com/realDonaldTrump/status/674578580681134080"
+            }
+          ]
+        }
+      },
+      {
+        "appeared_at": "2016-08-01T14:48:22",
+        "created_at": "2016-11-20T01:32:05.100928",
+        "quote_id": "C90c1W4mSF6KG1C5Lmq4Sg",
+        "tags": [
+          "Hillary Clinton"
+        ],
+        "updated_at": "2016-11-20T01:32:05.100928",
+        "value": "#CrookedHillary \nhttps://t.co/oHI6xrDJU0",
+        "_links": {
+          "self": {
+            "href": "/quote/C90c1W4mSF6KG1C5Lmq4Sg"
+          }
+        },
+        "_embedded": {
+          "author": [
+            {
+              "created_at": "2016-11-14T01:14:02.096776",
+              "bio": null,
+              "author_id": "wVE8Y7BoRKCBkxs1JkqAvw",
+              "name": "Donald Trump",
+              "slug": "donald-trump",
+              "updated_at": "2016-11-14T01:14:02.096776"
+            }
+          ],
+          "source": [
+            {
+              "created_at": "2016-11-20T01:32:04.711699",
+              "filename": null,
+              "quote_source_id": "EXno31U9TVCFsrnRK_dDEA",
+              "remarks": null,
+              "updated_at": "2016-11-20T01:32:04.711699",
+              "url": "https://twitter.com/realDonaldTrump/status/760125021280960512"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "/tag/Hillary%20Clinton"
+    },
+    "prev": {
+      "href": "/tag/Hillary%20Clinton"
+    },
+    "next": {
+      "href": "/tag/Hillary%20Clinton?page=2"
+    },
+    "first": {
+      "href": "/tag/Hillary%20Clinton"
+    },
+    "last": {
+      "href": "/tag/Hillary%20Clinton?page=12"
+    }
+  }
+}
