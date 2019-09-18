@@ -22,9 +22,10 @@ class MemeView: UIView {
 	
 	private let memeImageView = UIImageView()
 	private let updateMemeButton = UIButton()
-	
+	private let activityIndicator = UIActivityIndicatorView()
 	
 	private var memeImageViewHeightConstraint: NSLayoutConstraint?
+	private var activityIndicatorYConstraint: NSLayoutConstraint?
 	
 	public var memeImage: UIImage {
 		get {
@@ -33,6 +34,14 @@ class MemeView: UIView {
 		set {
 			configureMemeImageViewHeight(with: newValue.size)
 			memeImageView.image = newValue
+		}
+	}
+	
+	public var isImageLoading = false {
+		didSet {
+			isImageLoading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+			activityIndicator.isHidden = !isImageLoading
+			memeImageView.isHidden = isImageLoading
 		}
 	}
 	
@@ -62,22 +71,30 @@ class MemeView: UIView {
 	private func addSubviewsAndConstraints() {
         addSubview(memeImageView)
 		addSubview(updateMemeButton)
+		addSubview(activityIndicator)
 		
 		subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 			
+		NSLayoutConstraint.activate([
+			memeImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+			memeImageView.widthAnchor.constraint(equalTo: widthAnchor, constant: -2 * Constants.Label.margin.rawValue),
+			
+			activityIndicator.centerXAnchor.constraint(equalTo: memeImageView.centerXAnchor),
+			
+			updateMemeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.Button.margin.rawValue),
+			updateMemeButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+			updateMemeButton.heightAnchor.constraint(equalToConstant: 44)
+		])
+		
+		activityIndicatorYConstraint = activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
+		activityIndicatorYConstraint?.isActive = true
+		
 		if #available(iOS 11.0, *) {
-			NSLayoutConstraint.activate([
-				memeImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Constants.Label.margin.rawValue),
-				memeImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-				memeImageView.widthAnchor.constraint(equalTo: widthAnchor, constant: -2 * Constants.Label.margin.rawValue),
-				
-				updateMemeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.Button.margin.rawValue),
-				updateMemeButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-				updateMemeButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -Constants.Button.margin.rawValue),
-				updateMemeButton.heightAnchor.constraint(equalToConstant: 44)
-			])
+			memeImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Constants.Label.margin.rawValue).isActive = true
+			updateMemeButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -Constants.Button.margin.rawValue).isActive = true
 		} else {
-			// Fallback on earlier versions
+			memeImageView.topAnchor.constraint(equalTo: topAnchor, constant: Constants.Label.margin.rawValue).isActive = true
+			updateMemeButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.Button.margin.rawValue).isActive = true
 		}
     }
 	
@@ -95,6 +112,7 @@ class MemeView: UIView {
 			isDarkMode = false
 		}
 		backgroundColor = isDarkMode ? .black : .white
+		activityIndicator.color = isDarkMode ? .white : .gray
 		updateMemeButton.backgroundColor = isDarkMode ? .white : .black
 		updateMemeButton.setTitleColor(isDarkMode ? .black : .white, for: .normal)
 	}
@@ -108,8 +126,14 @@ class MemeView: UIView {
 		guard memeImageViewHeightConstraint == nil else {
 			return
 		}
+		activityIndicatorYConstraint?.isActive = false
+		
 		memeImageViewHeightConstraint = memeImageView.heightAnchor.constraint(equalTo: memeImageView.widthAnchor, multiplier: size.height / size.width)
 		memeImageViewHeightConstraint?.isActive = true
+		
+		activityIndicatorYConstraint = activityIndicator.centerYAnchor.constraint(equalTo: memeImageView.centerYAnchor)
+		activityIndicatorYConstraint?.isActive = true
+		
 		layoutIfNeeded()
 	}
 }

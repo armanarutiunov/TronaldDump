@@ -124,10 +124,6 @@ extension QuoteListViewController: UISearchBarDelegate {
 			viewModel.searchQuotes(with: query)
 		}
 	}
-	
-//	override func becomeFirstResponder() -> Bool {
-//		searchb
-//	}
 }
 
 extension QuoteListViewController: UISearchResultsUpdating {

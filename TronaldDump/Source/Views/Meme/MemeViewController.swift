@@ -37,11 +37,7 @@ class MemeViewController: UIViewController {
 		title = "Memes"
 		viewModel.addObserver(self)
 		setupView()
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
-		viewModel.updateMeme()
+		updateMeme()
 	}
 	
 	// MARK: - Private
@@ -49,13 +45,19 @@ class MemeViewController: UIViewController {
 	private func setupView() {
 		memeView.updateMemeButtonTitle = "Update Meme"
 		memeView.didTapUpdateMemeButton = { [weak self] in
-			self?.viewModel.updateMeme()
+			self?.updateMeme()
 		}
+	}
+	
+	private func updateMeme() {
+		viewModel.updateMeme()
+		memeView.isImageLoading = true
 	}
 }
 
 extension MemeViewController: MemeViewModelObserver {
 	func didUpdateMeme() {
 		memeView.memeImage = viewModel.image
+		memeView.isImageLoading = false
 	}
 }
