@@ -55,6 +55,7 @@ class QuoteListViewController: UIViewController {
 		}
 		if #available(iOS 11.0, *) {
 			navigationItem.searchController = searchController
+			navigationItem.hidesSearchBarWhenScrolling = false
 		} else {
 			quoteListView.setTableHeaderView(searchController.searchBar)
 		}
