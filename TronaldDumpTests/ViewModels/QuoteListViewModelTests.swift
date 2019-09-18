@@ -25,7 +25,7 @@ class QuoteListViewModelTests: XCTestCase {
 			XCTAssertEqual(self?.systemUnderTest.quotes.count, 1)
 			exp.fulfill()
 		}
-		waitForExpectations(timeout: 0.1, handler: nil)
+		waitForExpectations(timeout: 0.5, handler: nil)
 	}
 
 	func testQuotesNotFetchedOnInit() {
@@ -35,7 +35,7 @@ class QuoteListViewModelTests: XCTestCase {
 			XCTAssertEqual(self?.systemUnderTest.quotes.count, 0)
 			exp.fulfill()
 		}
-		waitForExpectations(timeout: 0.1, handler: nil)
+		waitForExpectations(timeout: 0.5, handler: nil)
 	}
 	
 	func testSourceUrlProvider() {
@@ -45,7 +45,7 @@ class QuoteListViewModelTests: XCTestCase {
 			XCTAssertEqual(url, "https://twitter.com".url)
 			exp.fulfill()
 		}
-		waitForExpectations(timeout: 0.1, handler: nil)
+		waitForExpectations(timeout: 0.5, handler: nil)
 	}
 	
 	func testQuoteBookmarking() {
@@ -61,7 +61,7 @@ class QuoteListViewModelTests: XCTestCase {
 			XCTAssertFalse(self.systemUnderTest.isQuoteSaved(at: 0))
 			exp.fulfill()
 		}
-		waitForExpectations(timeout: 0.1, handler: nil)
+		waitForExpectations(timeout: 0.5, handler: nil)
 	}
 	
 	func testSearch() {
@@ -74,6 +74,6 @@ class QuoteListViewModelTests: XCTestCase {
 			XCTAssertEqual(self?.systemUnderTest.quotes.count, 1)
 			exp.fulfill()
 		}
-		waitForExpectations(timeout: 0.1, handler: nil)
+		waitForExpectations(timeout: 0.5, handler: nil)
 	}
 }
