@@ -39,7 +39,6 @@ class QuoteListViewController: UIViewController {
 		title = viewModel.tagTitle
 		quoteListView.configureTableView(with: self)
 		viewModel.addObserver(self)
-		configureSearchController()
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -48,24 +47,6 @@ class QuoteListViewController: UIViewController {
 	}
 	
 	// MARK: - Private
-	
-	private func configureSearchController() {
-		guard viewModel.isSearchEnabled else {
-			return
-		}
-		if #available(iOS 11.0, *) {
-			navigationItem.searchController = searchController
-			navigationItem.hidesSearchBarWhenScrolling = false
-		} else {
-			quoteListView.setTableHeaderView(searchController.searchBar)
-		}
-		definesPresentationContext = true
-		searchController.searchResultsUpdater = self
-		searchController.obscuresBackgroundDuringPresentation = false
-		searchController.searchBar.placeholder = "Search"
-		searchController.searchBar.delegate = self
-		quoteListView.noResultsText = "No results for your query"
-	}
 	
 	private func notifyUserSourceUnknown() {
 		let alertController = UIAlertController(title: "Quote source is unkown", message: nil, preferredStyle: .alert)
@@ -86,19 +67,12 @@ extension QuoteListViewController: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") as? QuoteCell else {
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell") else {
 			fatalError("Failed to dequeue quoteCell")
 		}
 		let quote = viewModel.quotes[indexPath.row]
-		cell.quoteText = quote.value
-		cell.isBookmarked = viewModel.isQuoteSaved(at: indexPath.row)
-		cell.didUpdateSavedState = { [weak self] in
-			guard let self = self else {
-				return
-			}
-			self.viewModel.updateQuoteState(at: indexPath.row)
-			cell.isBookmarked = self.viewModel.isQuoteSaved(at: indexPath.row)
-		}
+		cell.textLabel?.text = quote.value
+		cell.textLabel?.numberOfLines = 0
 		return cell
 	}
 }
@@ -119,20 +93,3 @@ extension QuoteListViewController: QuoteListViewModelObserver {
 		quoteListView.reloadTableView()
 	}
 }
-
-extension QuoteListViewController: UISearchBarDelegate {
-	func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
-		if let query = searchBar.text {
-			viewModel.searchQuotes(with: query)
-		}
-	}
-}
-
-extension QuoteListViewController: UISearchResultsUpdating {
-	func updateSearchResults(for searchController: UISearchController) {
-		if let query = searchController.searchBar.text {
-			viewModel.searchQuotes(with: query)
-		}
-	}
-}
-

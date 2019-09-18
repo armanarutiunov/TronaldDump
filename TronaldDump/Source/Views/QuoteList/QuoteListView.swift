@@ -17,16 +17,6 @@ class QuoteListView: UIView {
 	}
 	
 	private let tableView = UITableView()
-	private let noResultsLabel = UILabel()
-	
-	var noResultsText: String {
-		get {
-			noResultsLabel.text ?? ""
-		}
-		set {
-			noResultsLabel.text = newValue
-		}
-	}
 	
 	init() {
         super.init(frame: CGRect.zero)
@@ -42,24 +32,18 @@ class QuoteListView: UIView {
 		tableView.dataSource = viewController
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 44
-		tableView.register(QuoteCell.self, forCellReuseIdentifier: Constants.TableView.cellIdentifier)
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: Constants.TableView.cellIdentifier)
 		tableView.tableFooterView = UIView()
-	}
-	
-	func setTableHeaderView(_ view: UIView) {
-		tableView.tableHeaderView = view
 	}
 	
 	func reloadTableView() {
 		tableView.reloadData()
-		noResultsLabel.isHidden = tableView.numberOfRows(inSection: 0) > 0
 	}
 	
 	// MARK: - Private
 	
 	private func addSubviewsAndConstraints() {
         addSubview(tableView)
-		addSubview(noResultsLabel)
 		
 		subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
 		
@@ -67,10 +51,7 @@ class QuoteListView: UIView {
 			tableView.topAnchor.constraint(equalTo: topAnchor),
 			tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
 			tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-			tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-			
-			noResultsLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-			noResultsLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
+			tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
 		])
     }
 

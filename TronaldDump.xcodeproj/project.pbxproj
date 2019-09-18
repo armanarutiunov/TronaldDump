@@ -21,28 +21,13 @@
 		01CA132E232B9B8300441423 /* QuoteListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132D232B9B8300441423 /* QuoteListView.swift */; };
 		01CA1330232DAAFF00441423 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA132F232DAAFF00441423 /* Quote.swift */; };
 		01CA1332232DE82A00441423 /* TagCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1331232DE82A00441423 /* TagCoordinator.swift */; };
-		01CA1334232DE98900441423 /* MemeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1333232DE98900441423 /* MemeCoordinator.swift */; };
-		01CA1336232DEA9B00441423 /* QuoteSearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */; };
-		01CA1338232DEABC00441423 /* SavedQuotesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */; };
-		01CA133A232DEE6600441423 /* QuoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CA1339232DEE6600441423 /* QuoteCell.swift */; };
-		01E85F83232E54DB0012BCAC /* DataPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */; };
-		01E85F87232E5FD60012BCAC /* SavedQuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F86232E5FD60012BCAC /* SavedQuotesView.swift */; };
-		01E85F89232E5FEB0012BCAC /* SavedQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F88232E5FEB0012BCAC /* SavedQuotesViewController.swift */; };
-		01E85F8B232E5FF60012BCAC /* SavedQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F8A232E5FF60012BCAC /* SavedQuotesViewModel.swift */; };
-		01E85F8E232ED4DD0012BCAC /* MemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F8D232ED4DD0012BCAC /* MemeViewModel.swift */; };
-		01E85F90232ED5240012BCAC /* MemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F8F232ED5240012BCAC /* MemeViewController.swift */; };
-		01E85F92232ED5380012BCAC /* MemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F91232ED5380012BCAC /* MemeView.swift */; };
-		01E85F95232ED5580012BCAC /* MemeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85F94232ED5580012BCAC /* MemeService.swift */; };
 		01E85FA1233066C40012BCAC /* URLConvertibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FA0233066C40012BCAC /* URLConvertibleTests.swift */; };
-		01E85FA3233069F70012BCAC /* DataPersistenceServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FA2233069F70012BCAC /* DataPersistenceServiceTests.swift */; };
 		01E85FA8233071460012BCAC /* CloudRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FA7233071460012BCAC /* CloudRequestTests.swift */; };
 		01E85FAA2330757C0012BCAC /* QuoteListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FA92330757C0012BCAC /* QuoteListViewModelTests.swift */; };
 		01E85FAD233076E40012BCAC /* TagServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FAC233076E40012BCAC /* TagServiceMock.swift */; };
 		01E85FB02330804F0012BCAC /* TagServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FAF2330804F0012BCAC /* TagServiceTests.swift */; };
 		01E85FB22330826A0012BCAC /* CloudServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FB12330826A0012BCAC /* CloudServiceMock.swift */; };
-		01E85FB4233082BA0012BCAC /* DataPersistenceServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01E85FB3233082BA0012BCAC /* DataPersistenceServiceMock.swift */; };
 		01E85FB92331B6830012BCAC /* quotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 01E85FB72331B6830012BCAC /* quotes.json */; };
-		01E85FBA2331B6830012BCAC /* quote-search.json in Resources */ = {isa = PBXBuildFile; fileRef = 01E85FB82331B6830012BCAC /* quote-search.json */; };
 		01E85FBC2331B9880012BCAC /* tags.json in Resources */ = {isa = PBXBuildFile; fileRef = 01E85FBB2331B9880012BCAC /* tags.json */; };
 		01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF3232AEA63009CCAE1 /* TagList.swift */; };
 		01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */; };
@@ -82,28 +67,13 @@
 		01CA132D232B9B8300441423 /* QuoteListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListView.swift; sourceTree = "<group>"; };
 		01CA132F232DAAFF00441423 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		01CA1331232DE82A00441423 /* TagCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagCoordinator.swift; sourceTree = "<group>"; };
-		01CA1333232DE98900441423 /* MemeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCoordinator.swift; sourceTree = "<group>"; };
-		01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteSearchCoordinator.swift; sourceTree = "<group>"; };
-		01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesCoordinator.swift; sourceTree = "<group>"; };
-		01CA1339232DEE6600441423 /* QuoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCell.swift; sourceTree = "<group>"; };
-		01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceService.swift; sourceTree = "<group>"; };
-		01E85F86232E5FD60012BCAC /* SavedQuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesView.swift; sourceTree = "<group>"; };
-		01E85F88232E5FEB0012BCAC /* SavedQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesViewController.swift; sourceTree = "<group>"; };
-		01E85F8A232E5FF60012BCAC /* SavedQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedQuotesViewModel.swift; sourceTree = "<group>"; };
-		01E85F8D232ED4DD0012BCAC /* MemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewModel.swift; sourceTree = "<group>"; };
-		01E85F8F232ED5240012BCAC /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
-		01E85F91232ED5380012BCAC /* MemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeView.swift; sourceTree = "<group>"; };
-		01E85F94232ED5580012BCAC /* MemeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeService.swift; sourceTree = "<group>"; };
 		01E85FA0233066C40012BCAC /* URLConvertibleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConvertibleTests.swift; sourceTree = "<group>"; };
-		01E85FA2233069F70012BCAC /* DataPersistenceServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceServiceTests.swift; sourceTree = "<group>"; };
 		01E85FA7233071460012BCAC /* CloudRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudRequestTests.swift; sourceTree = "<group>"; };
 		01E85FA92330757C0012BCAC /* QuoteListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteListViewModelTests.swift; sourceTree = "<group>"; };
 		01E85FAC233076E40012BCAC /* TagServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagServiceMock.swift; sourceTree = "<group>"; };
 		01E85FAF2330804F0012BCAC /* TagServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagServiceTests.swift; sourceTree = "<group>"; };
 		01E85FB12330826A0012BCAC /* CloudServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudServiceMock.swift; sourceTree = "<group>"; };
-		01E85FB3233082BA0012BCAC /* DataPersistenceServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceServiceMock.swift; sourceTree = "<group>"; };
 		01E85FB72331B6830012BCAC /* quotes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quotes.json; sourceTree = "<group>"; };
-		01E85FB82331B6830012BCAC /* quote-search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "quote-search.json"; sourceTree = "<group>"; };
 		01E85FBB2331B9880012BCAC /* tags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tags.json; sourceTree = "<group>"; };
 		01F8AEF3232AEA63009CCAE1 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		01F8AEF6232AF3A7009CCAE1 /* CloudService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudService.swift; sourceTree = "<group>"; };
@@ -215,8 +185,6 @@
 			children = (
 				0104BD2D232ADEC400B48B80 /* TagList */,
 				01CA1326232B9A4000441423 /* QuoteList */,
-				01E85F85232E5FB70012BCAC /* SavedQuotes */,
-				01E85F8C232ED4B70012BCAC /* Meme */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -226,9 +194,6 @@
 			children = (
 				0104BD2B232ADE3A00B48B80 /* Coordinator.swift */,
 				01CA1331232DE82A00441423 /* TagCoordinator.swift */,
-				01CA1335232DEA9B00441423 /* QuoteSearchCoordinator.swift */,
-				01CA1337232DEABC00441423 /* SavedQuotesCoordinator.swift */,
-				01CA1333232DE98900441423 /* MemeCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -239,8 +204,6 @@
 				0104BD23232ADD3D00B48B80 /* ServiceContainer.swift */,
 				01F8AEF5232AF395009CCAE1 /* Cloud */,
 				01F8AF05232B2614009CCAE1 /* Tag */,
-				01E85F93232ED5490012BCAC /* Meme */,
-				01E85F84232E54DF0012BCAC /* DataPersistence */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -269,45 +232,8 @@
 				01CA1329232B9B5200441423 /* QuoteListViewModel.swift */,
 				01CA132B232B9B6A00441423 /* QuoteListViewController.swift */,
 				01CA132D232B9B8300441423 /* QuoteListView.swift */,
-				01CA1339232DEE6600441423 /* QuoteCell.swift */,
 			);
 			path = QuoteList;
-			sourceTree = "<group>";
-		};
-		01E85F84232E54DF0012BCAC /* DataPersistence */ = {
-			isa = PBXGroup;
-			children = (
-				01E85F82232E54DB0012BCAC /* DataPersistenceService.swift */,
-			);
-			path = DataPersistence;
-			sourceTree = "<group>";
-		};
-		01E85F85232E5FB70012BCAC /* SavedQuotes */ = {
-			isa = PBXGroup;
-			children = (
-				01E85F8A232E5FF60012BCAC /* SavedQuotesViewModel.swift */,
-				01E85F88232E5FEB0012BCAC /* SavedQuotesViewController.swift */,
-				01E85F86232E5FD60012BCAC /* SavedQuotesView.swift */,
-			);
-			path = SavedQuotes;
-			sourceTree = "<group>";
-		};
-		01E85F8C232ED4B70012BCAC /* Meme */ = {
-			isa = PBXGroup;
-			children = (
-				01E85F8D232ED4DD0012BCAC /* MemeViewModel.swift */,
-				01E85F8F232ED5240012BCAC /* MemeViewController.swift */,
-				01E85F91232ED5380012BCAC /* MemeView.swift */,
-			);
-			path = Meme;
-			sourceTree = "<group>";
-		};
-		01E85F93232ED5490012BCAC /* Meme */ = {
-			isa = PBXGroup;
-			children = (
-				01E85F94232ED5580012BCAC /* MemeService.swift */,
-			);
-			path = Meme;
 			sourceTree = "<group>";
 		};
 		01E85F9F233066A60012BCAC /* Utils */ = {
@@ -321,7 +247,6 @@
 		01E85FA4233069FC0012BCAC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				01E85FA2233069F70012BCAC /* DataPersistenceServiceTests.swift */,
 				01E85FA7233071460012BCAC /* CloudRequestTests.swift */,
 				01E85FAF2330804F0012BCAC /* TagServiceTests.swift */,
 			);
@@ -339,12 +264,10 @@
 		01E85FAE233078890012BCAC /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				01E85FB82331B6830012BCAC /* quote-search.json */,
 				01E85FB72331B6830012BCAC /* quotes.json */,
 				01E85FBB2331B9880012BCAC /* tags.json */,
 				01E85FAC233076E40012BCAC /* TagServiceMock.swift */,
 				01E85FB12330826A0012BCAC /* CloudServiceMock.swift */,
-				01E85FB3233082BA0012BCAC /* DataPersistenceServiceMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -460,7 +383,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E85FBA2331B6830012BCAC /* quote-search.json in Resources */,
 				01E85FB92331B6830012BCAC /* quotes.json in Resources */,
 				01E85FBC2331B9880012BCAC /* tags.json in Resources */,
 			);
@@ -474,31 +396,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				01CA1330232DAAFF00441423 /* Quote.swift in Sources */,
-				01E85F83232E54DB0012BCAC /* DataPersistenceService.swift in Sources */,
 				0104BD2F232ADED300B48B80 /* TagListViewModel.swift in Sources */,
-				01E85F95232ED5580012BCAC /* MemeService.swift in Sources */,
 				01F8AF07232B2623009CCAE1 /* TagService.swift in Sources */,
 				0104BD33232ADF6E00B48B80 /* TagListView.swift in Sources */,
-				01CA133A232DEE6600441423 /* QuoteCell.swift in Sources */,
 				01F8AF02232B0D0A009CCAE1 /* URLExtensions.swift in Sources */,
 				01F8AEFB232AF58E009CCAE1 /* CloudRequest.swift in Sources */,
 				0104BD24232ADD3D00B48B80 /* ServiceContainer.swift in Sources */,
 				0104BD2C232ADE3A00B48B80 /* Coordinator.swift in Sources */,
-				01E85F92232ED5380012BCAC /* MemeView.swift in Sources */,
-				01E85F90232ED5240012BCAC /* MemeViewController.swift in Sources */,
-				01E85F8E232ED4DD0012BCAC /* MemeViewModel.swift in Sources */,
 				01F8AEF4232AEA63009CCAE1 /* TagList.swift in Sources */,
-				01E85F8B232E5FF60012BCAC /* SavedQuotesViewModel.swift in Sources */,
 				0104BCF8232ADC1700B48B80 /* AppDelegate.swift in Sources */,
-				01CA1334232DE98900441423 /* MemeCoordinator.swift in Sources */,
 				01CA132A232B9B5200441423 /* QuoteListViewModel.swift in Sources */,
 				01F8AF04232B0EC1009CCAE1 /* CloudConfiguration.swift in Sources */,
-				01E85F87232E5FD60012BCAC /* SavedQuotesView.swift in Sources */,
 				0104BD31232ADF1A00B48B80 /* TagListViewController.swift in Sources */,
 				01CA1332232DE82A00441423 /* TagCoordinator.swift in Sources */,
-				01E85F89232E5FEB0012BCAC /* SavedQuotesViewController.swift in Sources */,
-				01CA1336232DEA9B00441423 /* QuoteSearchCoordinator.swift in Sources */,
-				01CA1338232DEABC00441423 /* SavedQuotesCoordinator.swift in Sources */,
 				01CA132C232B9B6A00441423 /* QuoteListViewController.swift in Sources */,
 				01F8AEF9232AF4A8009CCAE1 /* HTTPMethod.swift in Sources */,
 				01F8AEF7232AF3A7009CCAE1 /* CloudService.swift in Sources */,
@@ -510,12 +420,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01E85FA3233069F70012BCAC /* DataPersistenceServiceTests.swift in Sources */,
 				01E85FA8233071460012BCAC /* CloudRequestTests.swift in Sources */,
 				0104BD0F232ADC1900B48B80 /* TronaldDumpTests.swift in Sources */,
 				01E85FB22330826A0012BCAC /* CloudServiceMock.swift in Sources */,
 				01E85FAA2330757C0012BCAC /* QuoteListViewModelTests.swift in Sources */,
-				01E85FB4233082BA0012BCAC /* DataPersistenceServiceMock.swift in Sources */,
 				01E85FB02330804F0012BCAC /* TagServiceTests.swift in Sources */,
 				01E85FAD233076E40012BCAC /* TagServiceMock.swift in Sources */,
 				01E85FA1233066C40012BCAC /* URLConvertibleTests.swift in Sources */,

@@ -33,8 +33,6 @@ class CloudServiceMock: CloudService {
 			return "tags"
 		case "tag/Hillary Clinton":
 			return "quotes"
-		case "search/quote?query=obama":
-			return "quote-search"
 		default:
 			return ""
 		}

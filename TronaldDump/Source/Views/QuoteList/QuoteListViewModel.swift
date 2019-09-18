@@ -15,13 +15,8 @@ public protocol QuoteListViewModelObserver: AnyObject {
 public protocol QuoteListViewModel {
 	var tagTitle: String { get }
 	var quotes: [Quote] { get }
-	var isSearchEnabled: Bool { get }
 	
 	func sourceUrl(at index: Int) -> URL?
-	func isQuoteSaved(at index: Int) -> Bool
-	func updateQuoteState(at index: Int)
-	
-	func searchQuotes(with query: String)
 	
 	func addObserver(_ observer: QuoteListViewModelObserver)
 	func removeObserver(_ observer: QuoteListViewModelObserver)
@@ -39,15 +34,10 @@ public class ConcreteQuoteListViewModel: QuoteListViewModel {
 		}
 	}
 	
-	public var isSearchEnabled: Bool
-	
-	public init(tagService: TagService, tagTitle: String, isSearchEnabled: Bool) {
+	public init(tagService: TagService, tagTitle: String) {
 		self.tagService = tagService
 		self.tagTitle = tagTitle
-		self.isSearchEnabled = isSearchEnabled
-		if !isSearchEnabled {
-			fetchQuotes()
-		}
+		fetchQuotes()
 	}
 	
 	public func sourceUrl(at index: Int) -> URL? {
@@ -56,35 +46,6 @@ public class ConcreteQuoteListViewModel: QuoteListViewModel {
 		}
 		return safeUrl
 	}
-	
-	public func isQuoteSaved(at index: Int) -> Bool {
-		let quote = quotes[index]
-		return tagService.isQuoteSaved(quote)
-	}
-	
-	public func updateQuoteState(at index: Int) {
-		let quote = quotes[index]
-		if tagService.isQuoteSaved(quote) {
-			tagService.deleteQuote(quote)
-		} else {
-			tagService.saveQuote(quote)
-		}
-	}
-	
-	public func searchQuotes(with query: String) {
-		guard query.count >= 3 else {
-			return
-		}
-		tagService.searchQuotes(with: query) { [weak self] result in
-			switch result {
-			case .success(let quotes):
-				self?.quotes = quotes
-			case .failure(let error):
-				self?.quotes = [Quote]()
-				print("Failure: \(error)")
-			}
-		}
- 	}
 	
 	public func addObserver(_ observer: QuoteListViewModelObserver) {
 		observers.add(observer)

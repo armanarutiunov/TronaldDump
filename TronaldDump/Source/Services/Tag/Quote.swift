@@ -8,37 +8,22 @@
 
 import Foundation
 
-protocol QuoteResponse: Decodable {
-	var quotes: [Quote] { get }
-}
-
-enum QuoteResponseCodingKeys: String, CodingKey {
-	case embedded = "_embedded"
-	case quotes
-	case tags
-}
-
-struct QuoteListResponse: QuoteResponse {
+struct QuoteListResponse: Decodable {
 	let quotes: [Quote]
 	
+	enum CodingKeys: String, CodingKey {
+		case embedded = "_embedded"
+		case tags
+	}
+	
 	public init(from decoder: Decoder) throws {
-		let container = try decoder.container(keyedBy: QuoteResponseCodingKeys.self)
-			.nestedContainer(keyedBy: QuoteResponseCodingKeys.self, forKey: .embedded)
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+			.nestedContainer(keyedBy: CodingKeys.self, forKey: .embedded)
 		quotes = try container.decode([Quote].self, forKey: .tags)
 	}
 }
 
-struct QuoteSearchResponse: QuoteResponse {
-	let quotes: [Quote]
-	
-	public init(from decoder: Decoder) throws {
-		let container = try decoder.container(keyedBy: QuoteResponseCodingKeys.self)
-			.nestedContainer(keyedBy: QuoteResponseCodingKeys.self, forKey: .embedded)
-		quotes = try container.decode([Quote].self, forKey: .quotes)
-	}
-}
-
-public struct Quote: Codable {
+public struct Quote: Decodable {
 	let id: String
 	let value: String
 	let urls: [URL?]
@@ -50,10 +35,6 @@ public struct Quote: Codable {
 		case sources = "source"
 		case urls = "url"
     }
-	
-	enum EncodingError: Error {
-		case sourcesEncodingFailure
-	}
 	
 	public init(id: String, value: String, urls: [URL?]) {
 		self.id = id
@@ -69,22 +50,6 @@ public struct Quote: Codable {
 		let embeddedContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .embedded)
 		let sources = try embeddedContainer.decode([Source].self, forKey: .sources)
 		urls = sources.map { $0.urlString.url }
-	}
-	
-	public func encode(to encoder: Encoder) throws {
-		var container = encoder.container(keyedBy: CodingKeys.self)
-		try container.encode(id, forKey: .id)
-		try container.encode(value, forKey: .value)
-		
-		let sources = try urls.map { url -> Source in
-			guard let urlString = url?.string else {
-				throw EncodingError.sourcesEncodingFailure
-			}
-			return Source(urlString: urlString)
-		}
-		
-		var embeddedContainer = container.nestedContainer(keyedBy: CodingKeys.self, forKey: .embedded)
-		try embeddedContainer.encode(sources, forKey: .sources)
 	}
 }
 

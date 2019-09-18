@@ -17,43 +17,20 @@ public protocol TagService {
 	typealias FetchTagListCompletionBlock = (Result<[String], APIError>) -> Void
 	typealias FetchQuotesCompletionBlock = (Result<[Quote], APIError>) -> Void
 	
-	var savedQuotes: [Quote] { get }
-	
 	func fetchTags(completion: @escaping FetchTagListCompletionBlock)
 	func fetchQuotes(for tag: String, completion: @escaping FetchQuotesCompletionBlock)
-	func searchQuotes(with query: String, completion: @escaping FetchQuotesCompletionBlock)
-	func saveQuote(_ quote: Quote)
-	func deleteQuote(_ quote: Quote)
-	func isQuoteSaved(_ quote: Quote) -> Bool
 }
 
 public class ConcreteTagService: TagService {
 	
 	private struct Endpoints {
 		static let tag = "tag"
-		static let search = "search/quote?query"
-	}
-	
-	private struct Constants {
-		static let savedQuotesKey = "saved_quotes"
 	}
 	
 	private let cloudService: CloudService
-	private let dataPersistenceService: DataPersistenceService
 	
-	public var savedQuotes: [Quote] {
-		get {
-			return dataPersistenceService.getObject(type: [Quote].self, key: Constants.savedQuotesKey) ?? [Quote]()
-		}
-		set {
-			dataPersistenceService.setObject(newValue, for: Constants.savedQuotesKey)
-		}
-	}
-	
-	
-	init(cloudService: CloudService, dataPersistenceService: DataPersistenceService) {
+	init(cloudService: CloudService) {
 		self.cloudService = cloudService
-		self.dataPersistenceService = dataPersistenceService
 	}
 	
 	public func fetchTags(completion: @escaping FetchTagListCompletionBlock) {
@@ -96,40 +73,6 @@ public class ConcreteTagService: TagService {
 		}
 	}
 	
-	public func searchQuotes(with query: String, completion: @escaping FetchQuotesCompletionBlock) {
-		let request = CloudRequest(route: "\(Endpoints.search)=\(query)")
-		cloudService.send(request) { [weak self] result in
-			guard let self = self else {
-				return
-			}
-			switch result {
-			case .success(let data):
-				guard let quotes = self.decodeQuoteList(from: data, isSearchData: true) else {
-					completion(.failure(.decodeFailure))
-					return
-				}
-				completion(.success(quotes))
-			case .failure(let error):
-				print("Cloud failure: \(error)")
-				completion(.failure(.cloudFailure))
-			}
-		}
-	}
-	
-	public func saveQuote(_ quote: Quote) {
-		savedQuotes.append(quote)
-	}
-	
-	public func deleteQuote(_ quote: Quote) {
-		if let index = savedQuotes.firstIndex(of: quote) {
-			savedQuotes.remove(at: index)
-		}
-	}
-	
-	public func isQuoteSaved(_ quote: Quote) -> Bool {
-		return savedQuotes.contains(quote)
-	}
-	
 	// MARK: - Private
 	
 	private func decodeTagList(from data: Data) -> [String]? {
@@ -144,10 +87,7 @@ public class ConcreteTagService: TagService {
 	
 	private func decodeQuoteList(from data: Data, isSearchData: Bool) -> [Quote]? {
 		do {
-			let quoteResponse: QuoteResponse
-			quoteResponse = isSearchData ?
-				try JSONDecoder().decode(QuoteSearchResponse.self, from: data) :
-				try JSONDecoder().decode(QuoteListResponse.self, from: data)
+			let quoteResponse = try JSONDecoder().decode(QuoteListResponse.self, from: data)
 			return quoteResponse.quotes
 		} catch {
 			print("Failed to decode data: \n\(String(describing: String(data: data, encoding: .utf8))). \nError: \(error)")

@@ -15,15 +15,7 @@ public struct ServiceContainer {
 	}()
 	
 	lazy var tagService: TagService = {
-		return ConcreteTagService(cloudService: cloudService, dataPersistenceService: dataPersistenceService)
-	}()
-	
-	lazy var dataPersistenceService: DataPersistenceService = {
-		return ConcreteDataPersistenceService()
-	}()
-	
-	lazy var memeService: MemeService = {
-		return ConcreteMemeService(cloudService: cloudService)
+		return ConcreteTagService(cloudService: cloudService)
 	}()
 	
 }

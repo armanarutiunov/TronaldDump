@@ -13,12 +13,10 @@ class TagServiceTests: XCTestCase {
 
 	var systemUnderTest: TagService!
 	var cloudServiceMock: CloudService!
-	var dataPersistenceMock: DataPersistenceService!
 	
     override func setUp() {
 		cloudServiceMock = CloudServiceMock()
-		dataPersistenceMock = DataPersistenceServiceMock()
-        systemUnderTest = ConcreteTagService(cloudService: cloudServiceMock, dataPersistenceService: dataPersistenceMock)
+        systemUnderTest = ConcreteTagService(cloudService: cloudServiceMock)
     }
 	
 	func testFetchTags() {
@@ -45,27 +43,6 @@ class TagServiceTests: XCTestCase {
 			exp.fulfill()
 		}
 		waitForExpectations(timeout: 0.5, handler: nil)
-	}
-	
-	func testSearchQuotes() {
-		let exp = expectation(description: "cloud request handle")
-		systemUnderTest.searchQuotes(with: "obama") { result in
-			guard case .success(let quotes) = result else {
-				XCTFail()
-				return
-			}
-			XCTAssertTrue(!quotes.isEmpty)
-			exp.fulfill()
-		}
-		waitForExpectations(timeout: 0.5, handler: nil)
-	}
-	
-	func testSaveQuote() {
-		let quote = Quote(id: "9328r7fuyi", value: "Quote1", urls: ["https://twitter.com".forceUnwrappedUrl])
-		systemUnderTest.saveQuote(quote)
-		XCTAssertTrue(systemUnderTest.isQuoteSaved(quote))
-		systemUnderTest.deleteQuote(quote)
-		XCTAssertFalse(systemUnderTest.isQuoteSaved(quote))
 	}
 
 }

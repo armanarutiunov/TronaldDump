@@ -14,9 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 	
 	private let serviceContainer = ServiceContainer()
-	private let initialViewController = UITabBarController()
+	private let initialViewController = UINavigationController()
 	private lazy var initialCoordinator: Coordinator = {
-        return MainCoordinator(tabBarController: initialViewController, serviceContainer: serviceContainer)
+        return TagCoordinator(navigationController: initialViewController, serviceContainer: serviceContainer)
 	}()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
