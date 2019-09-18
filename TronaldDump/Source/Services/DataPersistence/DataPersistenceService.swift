@@ -9,37 +9,37 @@
 import Foundation
 
 public protocol DataPersistenceService {
-	func setObject<Object>(_ object: Object, for key: String) where Object : Encodable
-	func getObject<Object>(type: Object.Type, key: String) -> Object? where Object : Decodable
-	func removeObject(for key: String)
+    func setObject<Object>(_ object: Object, for key: String) where Object : Encodable
+    func getObject<Object>(type: Object.Type, key: String) -> Object? where Object : Decodable
+    func removeObject(for key: String)
 }
 
 public class ConcreteDataPersistenceService: DataPersistenceService {
-	
-	let userDefaults = UserDefaults.standard
-	
-	public init() {
-		
-	}
-	
-	public func setObject<Object>(_ object: Object, for key: String) where Object : Encodable {
-		do {
+    
+    let userDefaults = UserDefaults.standard
+    
+    public init() {
+        
+    }
+    
+    public func setObject<Object>(_ object: Object, for key: String) where Object : Encodable {
+        do {
             let data = try JSONEncoder().encode(object)
-			userDefaults.set(data, forKey: key)
+            userDefaults.set(data, forKey: key)
         } catch {
             print("Failed to encode object of type \(type(of: object)) with error: \(error.localizedDescription)")
         }
-	}
-	
-	public func getObject<Object>(type: Object.Type, key: String) -> Object? where Object : Decodable {
-		guard let data = userDefaults.data(forKey: key),
+    }
+    
+    public func getObject<Object>(type: Object.Type, key: String) -> Object? where Object : Decodable {
+        guard let data = userDefaults.data(forKey: key),
             let object = try? JSONDecoder().decode(Object.self, from: data) else {
-            return nil
+                return nil
         }
         return object
-	}
-	
-	public func removeObject(for key: String) {
-		userDefaults.removeObject(forKey: key)
-	}
+    }
+    
+    public func removeObject(for key: String) {
+        userDefaults.removeObject(forKey: key)
+    }
 }

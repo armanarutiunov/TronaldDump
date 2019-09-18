@@ -9,6 +9,6 @@
 import Foundation
 
 public struct CloudConfiguration {
-	public static let baseUrl = "https://api.tronalddump.io".forceUnwrappedUrl
-	public static let header = ["accept": "application/hal+json"]
+    public static let baseUrl = "https://api.tronalddump.io".forceUnwrappedUrl
+    public static let header = ["accept": "application/hal+json"]
 }

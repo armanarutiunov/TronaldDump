@@ -34,7 +34,7 @@ extension HTTPMethod: Equatable {
     public static func == (lhs: HTTPMethod, rhs: HTTPMethod) -> Bool {
         switch (lhs, rhs) {
         case (.get, .get),
-			 (.post, .post),
+             (.post, .post),
              (.put, .put),
              (.delete, .delete):
             return true

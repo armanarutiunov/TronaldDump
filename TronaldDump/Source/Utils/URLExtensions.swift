@@ -16,9 +16,9 @@ public protocol URLConvertible {
 
 public extension URLConvertible {
     var forceUnwrappedUrl: URL {
-		guard let url = url else {
-			fatalError("Failed unwrapping url from string: \(string)")
-		}
+        guard let url = url else {
+            fatalError("Failed unwrapping url from string: \(string)")
+        }
         return url
     }
 }
@@ -27,7 +27,7 @@ extension String: URLConvertible {
     public var string: String {
         return self
     }
-
+    
     public var url: URL? {
         return URL(string: self)
     }
@@ -37,7 +37,7 @@ extension URL: URLConvertible {
     public var string: String {
         return absoluteString
     }
-
+    
     public var url: URL? {
         return self
     }

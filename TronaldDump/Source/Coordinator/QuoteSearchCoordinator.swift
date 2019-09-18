@@ -9,17 +9,17 @@
 import UIKit
 
 class QuoteSearchCoordinator: Coordinator {
-	let navigationController: UINavigationController
-	var serviceContainer: ServiceContainer
-	
-	init(navigationController: UINavigationController, serviceContainer: ServiceContainer) {
-		self.navigationController = navigationController
-		self.serviceContainer = serviceContainer
-	}
-	
-	func start() {
-		let viewModel = ConcreteQuoteListViewModel(tagService: serviceContainer.tagService, tagTitle: "Search", isSearchEnabled: true)
-		let viewController = QuoteListViewController(viewModel: viewModel)
-		navigationController.pushViewController(viewController, animated: false)
-	}
+    let navigationController: UINavigationController
+    var serviceContainer: ServiceContainer
+    
+    init(navigationController: UINavigationController, serviceContainer: ServiceContainer) {
+        self.navigationController = navigationController
+        self.serviceContainer = serviceContainer
+    }
+    
+    func start() {
+        let viewModel = ConcreteQuoteListViewModel(tagService: serviceContainer.tagService, tagTitle: "Search", isSearchEnabled: true)
+        let viewController = QuoteListViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: false)
+    }
 }
