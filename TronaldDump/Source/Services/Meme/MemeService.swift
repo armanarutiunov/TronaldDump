@@ -17,7 +17,7 @@ public protocol MemeService {
 public class ConcreteMemeService: MemeService {
     
     private struct Endpoints {
-        static let meme = "random/meme"
+        static let meme = "/random/meme"
     }
     
     private let cloudService: CloudService

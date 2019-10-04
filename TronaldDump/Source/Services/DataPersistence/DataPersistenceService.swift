@@ -18,10 +18,6 @@ public class ConcreteDataPersistenceService: DataPersistenceService {
     
     let userDefaults = UserDefaults.standard
     
-    public init() {
-        
-    }
-    
     public func setObject<Object>(_ object: Object, for key: String) where Object : Encodable {
         do {
             let data = try JSONEncoder().encode(object)

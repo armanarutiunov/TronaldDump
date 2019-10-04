@@ -30,8 +30,8 @@ public protocol TagService {
 public class ConcreteTagService: TagService {
     
     private struct Endpoints {
-        static let tag = "tag"
-        static let search = "search/quote?query"
+        static let tag = "/tag"
+        static let search = "/search/quote"
     }
     
     private struct Constants {
@@ -49,7 +49,6 @@ public class ConcreteTagService: TagService {
             dataPersistenceService.setObject(newValue, for: Constants.savedQuotesKey)
         }
     }
-    
     
     init(cloudService: CloudService, dataPersistenceService: DataPersistenceService) {
         self.cloudService = cloudService
@@ -97,7 +96,7 @@ public class ConcreteTagService: TagService {
     }
     
     public func searchQuotes(with query: String, completion: @escaping FetchQuotesCompletionBlock) {
-        let request = CloudRequest(route: "\(Endpoints.search)=\(query)")
+        let request = CloudRequest(route: Endpoints.search, parameters: ["query": query])
         cloudService.send(request) { [weak self] result in
             guard let self = self else {
                 return
@@ -144,13 +143,12 @@ public class ConcreteTagService: TagService {
     
     private func decodeQuoteList(from data: Data, isSearchData: Bool) -> [Quote]? {
         do {
-            let quoteResponse: QuoteResponse
-            quoteResponse = isSearchData ?
+            let quoteResponse: QuoteResponse = isSearchData ?
                 try JSONDecoder().decode(QuoteSearchResponse.self, from: data) :
                 try JSONDecoder().decode(QuoteListResponse.self, from: data)
             return quoteResponse.quotes
         } catch {
-            print("Failed to decode data: \n\(String(describing: String(data: data, encoding: .utf8))). \nError: \(error)")
+            print("Failed to decode data: \n\(String(data: data, encoding: .utf8) ?? ""). \nError: \(error)")
         }
         return nil
     }

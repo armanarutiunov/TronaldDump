@@ -19,7 +19,7 @@ public class ConcreteCloudService: CloudService {
     private let session = URLSession(configuration: .default)
     
     public func send(_ request: CloudRequest, completion: @escaping CloudRequestCompletionBlock) {
-        session.dataTask(with: request.url) { (data, _, error) in
+        session.dataTask(with: request.urlRequest) { (data, _, error) in
             DispatchQueue.main.async {
                 if let data = data {
                     completion(.success(data))
