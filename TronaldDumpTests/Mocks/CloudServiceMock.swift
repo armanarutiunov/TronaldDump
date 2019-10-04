@@ -29,11 +29,11 @@ class CloudServiceMock: CloudService {
     
     private func fileName(for route: String) -> String {
         switch route {
-        case "tag":
+        case "/tag":
             return "tags"
-        case "tag/Hillary Clinton":
+        case "/tag/Hillary Clinton":
             return "quotes"
-        case "search/quote?query=obama":
+        case "/search/quote":
             return "quote-search"
         default:
             return ""
