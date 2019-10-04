@@ -39,7 +39,7 @@ public struct CloudRequest {
     }
     
     public var urlRequest: URLRequest {
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 10)
+        var request = URLRequest(url: url, timeoutInterval: 10)
         request.httpBody = bodyData
         request.httpMethod = httpMethod.description
         request.allHTTPHeaderFields = httpHeader
